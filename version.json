@@ -1,0 +1,5 @@
+{
+  "version": "rail-contact-3",
+  "representation": "Original source frames with calibrated 3D accessories",
+  "fix": "Rail-conforming carrier perimeter and contact pads; removed global assembly lift"
+}

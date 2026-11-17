@@ -1,0 +1,23 @@
+{
+  "status": "Integrated local visual prototype; not manufacturer CAD",
+  "variants": [
+    "factory",
+    "AZ00018",
+    "AZ00025"
+  ],
+  "car_body": "Authored smooth station surface and separate glazing, cladding, lamp/grille geometry",
+  "detail_textures": "Small lamp and badge material references extracted from supplied photographs",
+  "crossbar_source": "New authored AZ00018 study; earlier rejected meshes not used",
+  "carrier_source": "Five visible crossmembers and shaped perimeter interpreted from official product photo",
+  "limits": [
+    "Source-image sequence is not an exact editable car mesh",
+    "Accessory dimensions and hidden mounts are inferred",
+    "Applicability to panoramic-roof variant not verified",
+    "No deployment"
+  ],
+  "blender_file": "Scorpio_N_Accessory_Prototype.blend",
+  "selected_viewer": "Original source car images plus calibrated native 3D accessory overlays",
+  "car_body_display": "72 source frames; lossless WebP after resize, no reconstructed body rendered",
+  "native_car_mesh_status": "Unapproved; not used as the visible car",
+  "accessory_assembly": "Scorpio_N_Photo_Assembly.blend"
+}

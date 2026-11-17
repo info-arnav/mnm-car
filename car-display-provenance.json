@@ -1,0 +1,453 @@
+{
+  "representation": "Original source car frames, lossless WebP after resize to2400x1350; separate calibrated 3D accessory overlay",
+  "views": 72,
+  "source_dimensions": [
+    3840,
+    2160
+  ],
+  "display_asset_dimensions": [
+    2400,
+    1350
+  ],
+  "total_bytes": 68795238,
+  "frames": [
+    {
+      "frame": 0,
+      "url": "assets/car/000.webp",
+      "bytes": 559560,
+      "source": "Deep_Forest_00000.png"
+    },
+    {
+      "frame": 1,
+      "url": "assets/car/001.webp",
+      "bytes": 590926,
+      "source": "Deep_Forest_00001.png"
+    },
+    {
+      "frame": 2,
+      "url": "assets/car/002.webp",
+      "bytes": 663718,
+      "source": "Deep_Forest_00002.png"
+    },
+    {
+      "frame": 3,
+      "url": "assets/car/003.webp",
+      "bytes": 747734,
+      "source": "Deep_Forest_00003.png"
+    },
+    {
+      "frame": 4,
+      "url": "assets/car/004.webp",
+      "bytes": 829952,
+      "source": "Deep_Forest_00004.png"
+    },
+    {
+      "frame": 5,
+      "url": "assets/car/005.webp",
+      "bytes": 906806,
+      "source": "Deep_Forest_00005.png"
+    },
+    {
+      "frame": 6,
+      "url": "assets/car/006.webp",
+      "bytes": 979138,
+      "source": "Deep_Forest_00006.png"
+    },
+    {
+      "frame": 7,
+      "url": "assets/car/007.webp",
+      "bytes": 1042422,
+      "source": "Deep_Forest_00007.png"
+    },
+    {
+      "frame": 8,
+      "url": "assets/car/008.webp",
+      "bytes": 1093336,
+      "source": "Deep_Forest_00008.png"
+    },
+    {
+      "frame": 9,
+      "url": "assets/car/009.webp",
+      "bytes": 1132212,
+      "source": "Deep_Forest_00009.png"
+    },
+    {
+      "frame": 10,
+      "url": "assets/car/010.webp",
+      "bytes": 1162922,
+      "source": "Deep_Forest_00010.png"
+    },
+    {
+      "frame": 11,
+      "url": "assets/car/011.webp",
+      "bytes": 1180896,
+      "source": "Deep_Forest_00011.png"
+    },
+    {
+      "frame": 12,
+      "url": "assets/car/012.webp",
+      "bytes": 1190742,
+      "source": "Deep_Forest_00012.png"
+    },
+    {
+      "frame": 13,
+      "url": "assets/car/013.webp",
+      "bytes": 1193562,
+      "source": "Deep_Forest_00013.png"
+    },
+    {
+      "frame": 14,
+      "url": "assets/car/014.webp",
+      "bytes": 1198668,
+      "source": "Deep_Forest_00014.png"
+    },
+    {
+      "frame": 15,
+      "url": "assets/car/015.webp",
+      "bytes": 1194662,
+      "source": "Deep_Forest_00015.png"
+    },
+    {
+      "frame": 16,
+      "url": "assets/car/016.webp",
+      "bytes": 1187714,
+      "source": "Deep_Forest_00016.png"
+    },
+    {
+      "frame": 17,
+      "url": "assets/car/017.webp",
+      "bytes": 1172446,
+      "source": "Deep_Forest_00017.png"
+    },
+    {
+      "frame": 18,
+      "url": "assets/car/018.webp",
+      "bytes": 1167764,
+      "source": "Deep_Forest_00018.png"
+    },
+    {
+      "frame": 19,
+      "url": "assets/car/019.webp",
+      "bytes": 1163634,
+      "source": "Deep_Forest_00019.png"
+    },
+    {
+      "frame": 20,
+      "url": "assets/car/020.webp",
+      "bytes": 1161188,
+      "source": "Deep_Forest_00020.png"
+    },
+    {
+      "frame": 21,
+      "url": "assets/car/021.webp",
+      "bytes": 1166338,
+      "source": "Deep_Forest_00021.png"
+    },
+    {
+      "frame": 22,
+      "url": "assets/car/022.webp",
+      "bytes": 1165084,
+      "source": "Deep_Forest_00022.png"
+    },
+    {
+      "frame": 23,
+      "url": "assets/car/023.webp",
+      "bytes": 1164670,
+      "source": "Deep_Forest_00023.png"
+    },
+    {
+      "frame": 24,
+      "url": "assets/car/024.webp",
+      "bytes": 1157686,
+      "source": "Deep_Forest_00024.png"
+    },
+    {
+      "frame": 25,
+      "url": "assets/car/025.webp",
+      "bytes": 1142160,
+      "source": "Deep_Forest_00025.png"
+    },
+    {
+      "frame": 26,
+      "url": "assets/car/026.webp",
+      "bytes": 1114172,
+      "source": "Deep_Forest_00026.png"
+    },
+    {
+      "frame": 27,
+      "url": "assets/car/027.webp",
+      "bytes": 1081982,
+      "source": "Deep_Forest_00027.png"
+    },
+    {
+      "frame": 28,
+      "url": "assets/car/028.webp",
+      "bytes": 1042956,
+      "source": "Deep_Forest_00028.png"
+    },
+    {
+      "frame": 29,
+      "url": "assets/car/029.webp",
+      "bytes": 1001738,
+      "source": "Deep_Forest_00029.png"
+    },
+    {
+      "frame": 30,
+      "url": "assets/car/030.webp",
+      "bytes": 954604,
+      "source": "Deep_Forest_00030.png"
+    },
+    {
+      "frame": 31,
+      "url": "assets/car/031.webp",
+      "bytes": 900322,
+      "source": "Deep_Forest_00031.png"
+    },
+    {
+      "frame": 32,
+      "url": "assets/car/032.webp",
+      "bytes": 839680,
+      "source": "Deep_Forest_00032.png"
+    },
+    {
+      "frame": 33,
+      "url": "assets/car/033.webp",
+      "bytes": 770756,
+      "source": "Deep_Forest_00033.png"
+    },
+    {
+      "frame": 34,
+      "url": "assets/car/034.webp",
+      "bytes": 700664,
+      "source": "Deep_Forest_00034.png"
+    },
+    {
+      "frame": 35,
+      "url": "assets/car/035.webp",
+      "bytes": 626830,
+      "source": "Deep_Forest_00035.png"
+    },
+    {
+      "frame": 36,
+      "url": "assets/car/036.webp",
+      "bytes": 601430,
+      "source": "Deep_Forest_00036.png"
+    },
+    {
+      "frame": 37,
+      "url": "assets/car/037.webp",
+      "bytes": 623326,
+      "source": "Deep_Forest_00037.png"
+    },
+    {
+      "frame": 38,
+      "url": "assets/car/038.webp",
+      "bytes": 693240,
+      "source": "Deep_Forest_00038.png"
+    },
+    {
+      "frame": 39,
+      "url": "assets/car/039.webp",
+      "bytes": 756170,
+      "source": "Deep_Forest_00039.png"
+    },
+    {
+      "frame": 40,
+      "url": "assets/car/040.webp",
+      "bytes": 815096,
+      "source": "Deep_Forest_00040.png"
+    },
+    {
+      "frame": 41,
+      "url": "assets/car/041.webp",
+      "bytes": 863104,
+      "source": "Deep_Forest_00041.png"
+    },
+    {
+      "frame": 42,
+      "url": "assets/car/042.webp",
+      "bytes": 905936,
+      "source": "Deep_Forest_00042.png"
+    },
+    {
+      "frame": 43,
+      "url": "assets/car/043.webp",
+      "bytes": 941630,
+      "source": "Deep_Forest_00043.png"
+    },
+    {
+      "frame": 44,
+      "url": "assets/car/044.webp",
+      "bytes": 970512,
+      "source": "Deep_Forest_00044.png"
+    },
+    {
+      "frame": 45,
+      "url": "assets/car/045.webp",
+      "bytes": 995082,
+      "source": "Deep_Forest_00045.png"
+    },
+    {
+      "frame": 46,
+      "url": "assets/car/046.webp",
+      "bytes": 1016490,
+      "source": "Deep_Forest_00046.png"
+    },
+    {
+      "frame": 47,
+      "url": "assets/car/047.webp",
+      "bytes": 1032266,
+      "source": "Deep_Forest_00047.png"
+    },
+    {
+      "frame": 48,
+      "url": "assets/car/048.webp",
+      "bytes": 1037366,
+      "source": "Deep_Forest_00048.png"
+    },
+    {
+      "frame": 49,
+      "url": "assets/car/049.webp",
+      "bytes": 1035586,
+      "source": "Deep_Forest_00049.png"
+    },
+    {
+      "frame": 50,
+      "url": "assets/car/050.webp",
+      "bytes": 1027600,
+      "source": "Deep_Forest_00050.png"
+    },
+    {
+      "frame": 51,
+      "url": "assets/car/051.webp",
+      "bytes": 1026268,
+      "source": "Deep_Forest_00051.png"
+    },
+    {
+      "frame": 52,
+      "url": "assets/car/052.webp",
+      "bytes": 1019298,
+      "source": "Deep_Forest_00052.png"
+    },
+    {
+      "frame": 53,
+      "url": "assets/car/053.webp",
+      "bytes": 1006772,
+      "source": "Deep_Forest_00053.png"
+    },
+    {
+      "frame": 54,
+      "url": "assets/car/054.webp",
+      "bytes": 1010272,
+      "source": "Deep_Forest_00054.png"
+    },
+    {
+      "frame": 55,
+      "url": "assets/car/055.webp",
+      "bytes": 996264,
+      "source": "Deep_Forest_00055.png"
+    },
+    {
+      "frame": 56,
+      "url": "assets/car/056.webp",
+      "bytes": 996866,
+      "source": "Deep_Forest_00056.png"
+    },
+    {
+      "frame": 57,
+      "url": "assets/car/057.webp",
+      "bytes": 1003470,
+      "source": "Deep_Forest_00057.png"
+    },
+    {
+      "frame": 58,
+      "url": "assets/car/058.webp",
+      "bytes": 1010114,
+      "source": "Deep_Forest_00058.png"
+    },
+    {
+      "frame": 59,
+      "url": "assets/car/059.webp",
+      "bytes": 1007502,
+      "source": "Deep_Forest_00059.png"
+    },
+    {
+      "frame": 60,
+      "url": "assets/car/060.webp",
+      "bytes": 999634,
+      "source": "Deep_Forest_00060.png"
+    },
+    {
+      "frame": 61,
+      "url": "assets/car/061.webp",
+      "bytes": 983080,
+      "source": "Deep_Forest_00061.png"
+    },
+    {
+      "frame": 62,
+      "url": "assets/car/062.webp",
+      "bytes": 964998,
+      "source": "Deep_Forest_00062.png"
+    },
+    {
+      "frame": 63,
+      "url": "assets/car/063.webp",
+      "bytes": 944530,
+      "source": "Deep_Forest_00063.png"
+    },
+    {
+      "frame": 64,
+      "url": "assets/car/064.webp",
+      "bytes": 921258,
+      "source": "Deep_Forest_00064.png"
+    },
+    {
+      "frame": 65,
+      "url": "assets/car/065.webp",
+      "bytes": 885224,
+      "source": "Deep_Forest_00065.png"
+    },
+    {
+      "frame": 66,
+      "url": "assets/car/066.webp",
+      "bytes": 849762,
+      "source": "Deep_Forest_00066.png"
+    },
+    {
+      "frame": 67,
+      "url": "assets/car/067.webp",
+      "bytes": 806392,
+      "source": "Deep_Forest_00067.png"
+    },
+    {
+      "frame": 68,
+      "url": "assets/car/068.webp",
+      "bytes": 760238,
+      "source": "Deep_Forest_00068.png"
+    },
+    {
+      "frame": 69,
+      "url": "assets/car/069.webp",
+      "bytes": 704960,
+      "source": "Deep_Forest_00069.png"
+    },
+    {
+      "frame": 70,
+      "url": "assets/car/070.webp",
+      "bytes": 646374,
+      "source": "Deep_Forest_00070.png"
+    },
+    {
+      "frame": 71,
+      "url": "assets/car/071.webp",
+      "bytes": 587484,
+      "source": "Deep_Forest_00071.png"
+    }
+  ],
+  "limits": [
+    "Display assets resized from source; appearance and silhouettes are retained without model re-rendering",
+    "A source-image sequence is not an editable 3D car mesh",
+    "Overlay depth comes from an approximate silhouette hull",
+    "Accessory dimensions, hidden hardware and applicability to panoramic roof variant remain inferred"
+  ]
+}
