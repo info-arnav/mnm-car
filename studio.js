@@ -1,55 +1,188 @@
 import * as THREE from 'three';
 import {GLTFLoader} from './vendor/GLTFLoader.js';
 import {HDRLoader} from './vendor/HDRLoader.js';
+
 const $=id=>document.getElementById(id),stage=$('stage'),canvas=$('vehicle');
+const mobile=matchMedia('(max-width:760px)').matches;
+const previewBase=mobile?'assets/rotation/mobile/':'assets/rotation/preview/';
+const detailBase=mobile?'assets/car/mobile/':'assets/car/';
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false,preserveDrawingBuffer:true});
-renderer.setPixelRatio(Math.min(devicePixelRatio||1,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.AgXToneMapping;renderer.autoClear=false;
-renderer.shadowMap.enabled=false;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;
+renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
+renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.AgXToneMapping;renderer.autoClear=false;
+// Rendering is requested only when the view changes. No shadow updates or idle loop.
+renderer.shadowMap.enabled=false;
 const scene=new THREE.Scene(),background=new THREE.Scene();background.background=new THREE.Color(0xf0f1ed);
 const camera=new THREE.PerspectiveCamera(13,1,.1,100),screenCamera=new THREE.OrthographicCamera(-1,1,1,-1,0,2);screenCamera.position.z=1;
 const imageMaterial=new THREE.MeshBasicMaterial({transparent:true,toneMapped:false,depthWrite:false,depthTest:false});
 const photo=new THREE.Mesh(new THREE.PlaneGeometry(2,2),imageMaterial);background.add(photo);
-const key=new THREE.DirectionalLight(0xfffbf7,2.0);key.position.set(4,8,-3);key.castShadow=false;key.shadow.mapSize.set(2048,2048);Object.assign(key.shadow.camera,{left:-3,right:3,top:3,bottom:-3,near:.1,far:20});key.shadow.normalBias=.002;key.shadow.bias=-.00005;key.shadow.radius=4;scene.add(key);scene.add(new THREE.HemisphereLight(0xe9f1f4,0x697065,.45));
-let model,crossbars,carrier,proxy,reference,ready=false,frame=9,desiredFrame=9,dragFrame=9,zoom=1,roofFocus=false,variant='factory',compare=false,auto=false,dirty=true,activeView='quarter',toastTimer,lastAuto=0;
-const images=new Map(),textures=new Map(),pointers=new Map(),mobileAssets=matchMedia('(max-width:760px)').matches;const carBase=mobileAssets?'assets/car/mobile/':'assets/car/';let gesture;
-const configuration={factory:{title:'Factory roof',count:'No added accessories',description:'The original roof rails remain part of the vehicle.'},crossbars:{title:'Roof crossbars',count:'1 accessory · AZ00018',description:'Two aluminium crossmembers with dark channels and separate molded feet.'},carrier:{title:'Integrated roof carrier',count:'1 accessory · AZ00025',description:'Five aluminium crossmembers, broad end panels and swept perimeter rails.'}};
+const key=new THREE.DirectionalLight(0xfffbf7,2);key.position.set(4,8,-3);scene.add(key,new THREE.HemisphereLight(0xe9f1f4,0x697065,.45));
+const previews=new Map(),previewTextures=new Map(),details=new Map(),pointers=new Map();
+const configuration={
+ factory:{title:'Standard roof',count:'No added accessories',description:'Keep the original roof rails on your Scorpio-N.'},
+ crossbars:{title:'Roof crossbars',count:'1 accessory',description:'Aluminium crossbars with a clean black finish at the mounts.'},
+ carrier:{title:'Integrated roof carrier',count:'1 accessory',description:'A streamlined roof carrier with five aluminium crossbars.'}
+};
+let model,crossbars,carrier,proxy,reference,poses,ready=false,displayReady=false;
+let frame=9,desiredFrame=9,dragFrame=9,zoom=1,roofFocus=false,variant='factory',compare=false,auto=false;
+let dirty=true,renderQueued=false,activeView='quarter',gesture,toastTimer,lastAuto=0,autoRequest;
+let detailTimer,detailController,detailGeneration=0,usingDetail=false;
 const wrap=n=>((Math.round(n)%72)+72)%72;
-async function imageFor(n){n=wrap(n);if(!images.has(n)){images.set(n,new Promise((resolve,reject)=>{const im=new Image();im.onload=async()=>{try{await im.decode();resolve(im)}catch(e){reject(e)}};im.onerror=()=>reject(Error('Car reference image unavailable: '+n));im.src=`${carBase}${String(n).padStart(3,'0')}.webp`;}));}return images.get(n);}
-function textureFor(n,im){if(!textures.has(n)){const tx=new THREE.Texture(im);tx.colorSpace=THREE.SRGBColorSpace;tx.minFilter=THREE.LinearFilter;tx.magFilter=THREE.LinearFilter;tx.generateMipmaps=false;tx.needsUpdate=true;textures.set(n,tx);while(textures.size>8){const [old,texture]=textures.entries().next().value;if(old===n)break;texture.dispose();textures.delete(old);}}return textures.get(n);}
-async function setFrame(n){n=wrap(n);desiredFrame=n;const im=await imageFor(n);if(desiredFrame!==n)return;frame=n;imageMaterial.map=textureFor(n,im);imageMaterial.needsUpdate=true;const T=new THREE.Matrix4().set(...reference.frames[n].transform_matrix.flat());T.decompose(camera.position,camera.quaternion,camera.scale);camera.updateMatrixWorld();projection();dirty=true;renderer.shadowMap.needsUpdate=true;while(images.size>16){const old=images.keys().next().value;if(old===n)break;images.delete(old);}}
-function projection(){if(!reference)return;const r=stage.getBoundingClientRect(),W=r.width,H=r.height,fit=Math.min(W/reference.w,H/reference.h)*zoom;const panY=roofFocus?H*.29:H*(W<761?.065:.045),cx=W/2,cy=H/2+panY,fx=reference.fl_x*fit,fy=reference.fl_y*fit,n=camera.near,f=camera.far;
- photo.scale.set(reference.w*fit/W,reference.h*fit/H,1);photo.position.set(0,-2*panY/H,0);camera.aspect=W/H;
- camera.projectionMatrix.set(2*fx/W,0,1-2*cx/W,0,0,2*fy/H,2*cy/H-1,0,0,0,-(f+n)/(f-n),-2*f*n/(f-n),0,0,-1,0);camera.projectionMatrixInverse.copy(camera.projectionMatrix).invert();dirty=true;
+const nextPaint=()=>new Promise(resolve=>requestAnimationFrame(resolve));
+const frameName=n=>String(n).padStart(3,'0')+'.webp';
+
+function requestRender(){
+ dirty=true;if(renderQueued||!displayReady||document.hidden)return;
+ renderQueued=true;requestAnimationFrame(()=>{renderQueued=false;if(dirty)render()});
 }
-function size(){const r=stage.getBoundingClientRect();renderer.setSize(r.width,r.height,false);projection();dirty=true;}
+function render(){
+ if(!displayReady)return;
+ renderer.clear();renderer.render(background,screenCamera);renderer.clearDepth();renderer.render(scene,camera);dirty=false;
+}
+function textureFor(image,detail=false){
+ const texture=new THREE.Texture(image);texture.colorSpace=THREE.SRGBColorSpace;
+ texture.minFilter=detail?THREE.LinearMipmapLinearFilter:THREE.LinearFilter;texture.magFilter=THREE.LinearFilter;texture.generateMipmaps=detail;texture.needsUpdate=true;
+ renderer.initTexture(texture);return texture;
+}
+async function prepareFrame(n){
+ if(previews.has(n))return previews.get(n);
+ const promise=(async()=>{
+  const image=new Image();image.decoding='async';image.src=previewBase+frameName(n);await image.decode();
+  await nextPaint();const texture=textureFor(image);previewTextures.set(n,texture);return image;
+ })();previews.set(n,promise);return promise;
+}
+function cancelDetail(){
+ clearTimeout(detailTimer);detailController?.abort();detailController=null;detailGeneration++;
+}
+function releaseDetail(entry){entry.texture.dispose();URL.revokeObjectURL(entry.url)}
+function scheduleDetail(){
+ clearTimeout(detailTimer);if(!ready||auto||pointers.size||document.hidden)return;
+ const n=frame;
+ if(details.has(n)){
+  imageMaterial.map=details.get(n).texture;usingDetail=true;requestRender();return;
+ }
+ detailTimer=setTimeout(()=>loadDetail(n),240);
+}
+async function loadDetail(n){
+ if(frame!==n||auto||pointers.size||document.hidden)return;
+ const generation=++detailGeneration;detailController?.abort();const controller=new AbortController();detailController=controller;
+ let url;
+ try{
+  const response=await fetch(detailBase+frameName(n),{signal:controller.signal,cache:'force-cache'});
+  if(!response.ok)throw Error('Image unavailable');
+  const blob=await response.blob();url=URL.createObjectURL(blob);
+  const image=new Image();image.decoding='async';image.src=url;await image.decode();
+  if(generation!==detailGeneration||frame!==n||auto||pointers.size){URL.revokeObjectURL(url);return}
+  const entry={image,url,texture:textureFor(image,true)};details.set(n,entry);
+  while(details.size>3){const [old,item]=details.entries().next().value;details.delete(old);releaseDetail(item)}
+  imageMaterial.map=entry.texture;usingDetail=true;requestRender();
+ }catch(error){
+  if(url)URL.revokeObjectURL(url);
+  // Detail is an optional enhancement; the complete prepared rotation stays usable.
+  if(error.name!=='AbortError')console.warn('Detail image could not be loaded.');
+ }finally{if(detailController===controller)detailController=null}
+}
+function setFrame(n){
+ n=wrap(n);if(!previewTextures.has(n))return;
+ desiredFrame=n;
+ if(frame!==n||!imageMaterial.map){
+  cancelDetail();frame=n;usingDetail=false;imageMaterial.map=previewTextures.get(n);
+  camera.position.copy(poses[n].position);camera.quaternion.copy(poses[n].quaternion);camera.updateMatrixWorld();projection();
+ }
+ scheduleDetail();
+}
+function projection(){
+ if(!reference)return;
+ const {width:W,height:H}=stage.getBoundingClientRect();if(!W||!H)return;
+ const fit=Math.min(W/reference.w,H/reference.h)*zoom,panY=roofFocus?H*.29:H*(W<761?.065:.045),cx=W/2,cy=H/2+panY;
+ const fx=reference.fl_x*fit,fy=reference.fl_y*fit,n=camera.near,f=camera.far;
+ photo.scale.set(reference.w*fit/W,reference.h*fit/H,1);photo.position.set(0,-2*panY/H,0);camera.aspect=W/H;
+ camera.projectionMatrix.set(2*fx/W,0,1-2*cx/W,0,0,2*fy/H,2*cy/H-1,0,0,0,-(f+n)/(f-n),-2*f*n/(f-n),0,0,-1,0);
+ camera.projectionMatrixInverse.copy(camera.projectionMatrix).invert();requestRender();
+}
+function size(){const r=stage.getBoundingClientRect();renderer.setSize(r.width,r.height,false);projection()}
 new ResizeObserver(size).observe(stage);size();
-function notify(text){clearTimeout(toastTimer);$('toast').textContent=text;$('toast').hidden=false;toastTimer=setTimeout(()=>$('toast').hidden=true,2600);}
-function applyVisibility(){if(crossbars)crossbars.visible=variant==='crossbars'&&!compare;if(carrier)carrier.visible=variant==='carrier'&&!compare;renderer.shadowMap.needsUpdate=true;dirty=true;}
-function selectVariant(next,persist=true){if(!configuration[next])next='factory';variant=next;compare=false;$('finish').setAttribute('aria-pressed','false');$('finish').textContent='Compare original';applyVisibility();for(const label of document.querySelectorAll('.option')){const selected=label.dataset.variant===next;label.classList.toggle('selected',selected);label.querySelector('input').checked=selected;}const v=configuration[next];$('selected-title').textContent=v.title;$('selected-count').textContent=v.count;$('selected-description').textContent=v.description;if(persist)try{localStorage.setItem('scorpio-accessory-prototype-v2',next)}catch{}}
-function setAuto(value){auto=value;lastAuto=performance.now();$('auto-rotate').setAttribute('aria-pressed',String(value));}
-function setView(view){if(!ready)return;setAuto(false);activeView=view;roofFocus=view==='roof';zoom=roofFocus?1.75:1;const n={quarter:9,front:0,side:18,rear:36,roof:14}[view]??9;dragFrame=n;setFrame(n);document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));}
-function changeZoom(factor){zoom=THREE.MathUtils.clamp(zoom*factor,.8,2.6);projection();}
-$('options').onchange=e=>{if(e.target.name==='accessory')selectVariant(e.target.value)};
-for(const b of document.querySelectorAll('[data-view]'))b.onclick=()=>setView(b.dataset.view);
+function notify(message){clearTimeout(toastTimer);$('toast').textContent=message;$('toast').hidden=false;toastTimer=setTimeout(()=>$('toast').hidden=true,2500)}
+function applyVisibility(){if(crossbars)crossbars.visible=variant==='crossbars'&&!compare;if(carrier)carrier.visible=variant==='carrier'&&!compare;requestRender()}
+function selectVariant(next,persist=true){
+ if(!configuration[next])next='factory';variant=next;compare=false;
+ $('finish').setAttribute('aria-pressed','false');$('finish').textContent='View without accessories';applyVisibility();
+ for(const label of document.querySelectorAll('.option')){const selected=label.dataset.variant===next;label.classList.toggle('selected',selected);label.querySelector('input').checked=selected}
+ const value=configuration[next];$('selected-title').textContent=value.title;$('selected-count').textContent=value.count;$('selected-description').textContent=value.description;
+ if(persist)try{localStorage.setItem('scorpio-accessory-prototype-v2',next)}catch{}
+}
+function autoStep(time){
+ if(!auto)return;
+ if(time-lastAuto>=110){lastAuto=time;setFrame(desiredFrame+1)}
+ autoRequest=requestAnimationFrame(autoStep);
+}
+function setAuto(value){
+ if(value&&!ready)return;
+ auto=value;cancelAnimationFrame(autoRequest);$('auto-rotate').setAttribute('aria-pressed',String(value));
+ if(value){cancelDetail();lastAuto=performance.now();autoRequest=requestAnimationFrame(autoStep)}else scheduleDetail();
+}
+function setView(view){
+ if(!ready)return;setAuto(false);activeView=view;roofFocus=view==='roof';zoom=roofFocus?1.75:1;
+ const n={quarter:9,front:0,side:18,rear:36,roof:14}[view]??9;dragFrame=n;setFrame(n);projection();
+ document.querySelectorAll('[data-view]').forEach(button=>button.classList.toggle('active',button.dataset.view===view));
+}
+function changeZoom(factor){if(!ready)return;zoom=THREE.MathUtils.clamp(zoom*factor,.8,2.6);projection();scheduleDetail()}
+$('options').onchange=event=>{if(event.target.name==='accessory')selectVariant(event.target.value)};
+for(const button of document.querySelectorAll('[data-view]'))button.onclick=()=>setView(button.dataset.view);
 $('zoom-in').onclick=()=>changeZoom(1.15);$('zoom-out').onclick=()=>changeZoom(1/1.15);
 $('auto-rotate').onclick=()=>setAuto(!auto);
 $('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.querySelector('.stage-wrap').requestFullscreen()}catch{notify('Fullscreen is unavailable in this browser.')}};
-$('finish').onclick=()=>{compare=!compare;applyVisibility();$('finish').textContent=compare?'Return to configuration':'Compare original';$('finish').setAttribute('aria-pressed',String(compare));};
-$('reset').onclick=()=>{selectVariant('factory');setView('quarter');notify('Factory configuration restored.')};
-function render(){renderer.clear();renderer.render(background,screenCamera);renderer.clearDepth();renderer.render(scene,camera);dirty=false;}
-$('capture').onclick=()=>{render();canvas.toBlob(blob=>{if(!blob)return;const a=document.createElement('a'),url=URL.createObjectURL(blob);a.href=url;a.download=`Scorpio-N-${variant}.png`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);notify('View captured.')},'image/png')};
-canvas.addEventListener('pointerdown',e=>{if(!ready)return;e.preventDefault();setAuto(false);canvas.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});dragFrame=desiredFrame;gesture={x:e.clientX,frame:dragFrame};if(pointers.size===2){const [a,b]=[...pointers.values()];gesture={distance:Math.hypot(a.x-b.x,a.y-b.y),zoom};}activeView=null;document.querySelectorAll('[data-view]').forEach(b=>b.classList.remove('active'));});
-canvas.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.size===2&&gesture.distance){const[a,b]=[...pointers.values()];zoom=THREE.MathUtils.clamp(gesture.zoom*Math.hypot(a.x-b.x,a.y-b.y)/gesture.distance,.8,2.6);projection();}else if(pointers.size===1&&gesture.x!==undefined){dragFrame=gesture.frame-(e.clientX-gesture.x)/Math.max(3.5,stage.clientWidth/110);setFrame(dragFrame);}});
-function endPointer(e){pointers.delete(e.pointerId);if(pointers.size===1){const[a]=pointers.values();gesture={x:a.x,frame:desiredFrame}}else if(!pointers.size)gesture=null;}
+$('finish').onclick=()=>{compare=!compare;applyVisibility();$('finish').textContent=compare?'Return to your selection':'View without accessories';$('finish').setAttribute('aria-pressed',String(compare))};
+$('reset').onclick=()=>{selectVariant('factory');setView('quarter');notify('Your selection has been reset.')};
+$('capture').onclick=()=>{render();canvas.toBlob(blob=>{if(!blob)return;const link=document.createElement('a'),url=URL.createObjectURL(blob);link.href=url;link.download=`Scorpio-N-${variant}.png`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);notify('Image saved.')},'image/png')};
+canvas.addEventListener('pointerdown',event=>{
+ if(!ready)return;event.preventDefault();setAuto(false);cancelDetail();canvas.setPointerCapture(event.pointerId);
+ pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});dragFrame=desiredFrame;gesture={x:event.clientX,frame:dragFrame};
+ if(pointers.size===2){const[a,b]=[...pointers.values()];gesture={distance:Math.hypot(a.x-b.x,a.y-b.y),zoom}}
+ activeView=null;document.querySelectorAll('[data-view]').forEach(button=>button.classList.remove('active'));
+});
+canvas.addEventListener('pointermove',event=>{
+ if(!pointers.has(event.pointerId))return;pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
+ if(pointers.size===2&&gesture.distance){const[a,b]=[...pointers.values()];zoom=THREE.MathUtils.clamp(gesture.zoom*Math.hypot(a.x-b.x,a.y-b.y)/gesture.distance,.8,2.6);projection()}
+ else if(pointers.size===1&&gesture.x!==undefined){dragFrame=gesture.frame-(event.clientX-gesture.x)/Math.max(3.5,stage.clientWidth/110);setFrame(dragFrame)}
+});
+function endPointer(event){pointers.delete(event.pointerId);if(pointers.size===1){const[a]=pointers.values();gesture={x:a.x,frame:desiredFrame}}else if(!pointers.size){gesture=null;scheduleDetail()}}
 canvas.addEventListener('pointerup',endPointer);canvas.addEventListener('pointercancel',endPointer);
-canvas.addEventListener('wheel',e=>{if(!ready)return;e.preventDefault();changeZoom(Math.exp(-e.deltaY*.001))},{passive:false});
-window.addEventListener('keydown',e=>{if(['INPUT','BUTTON','A','SELECT'].includes(document.activeElement.tagName))return;if(e.key==='ArrowLeft'){setAuto(false);setFrame(desiredFrame-1)}if(e.key==='ArrowRight'){setAuto(false);setFrame(desiredFrame+1)}if(e.key==='+'||e.key==='=')changeZoom(1.12);if(e.key==='-')changeZoom(1/1.12)});
+canvas.addEventListener('wheel',event=>{if(!ready)return;event.preventDefault();changeZoom(Math.exp(-event.deltaY*.001))},{passive:false});
+window.addEventListener('keydown',event=>{
+ if(!ready||['INPUT','BUTTON','A','SELECT'].includes(document.activeElement.tagName))return;
+ if(event.key==='ArrowLeft'){event.preventDefault();setAuto(false);setFrame(desiredFrame-1)}
+ if(event.key==='ArrowRight'){event.preventDefault();setAuto(false);setFrame(desiredFrame+1)}
+ if(event.key==='+'||event.key==='=')changeZoom(1.12);if(event.key==='-')changeZoom(1/1.12);
+});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){setAuto(false);cancelDetail()}else{requestRender();scheduleDetail()}});
+function showLoadingError(){
+ $('loading').hidden=false;$('loading').setAttribute('role','alert');
+ $('loading').innerHTML='<strong>Couldn’t load the model.</strong><button type="button" id="retry-loading">Try again</button>';
+ $('retry-loading').onclick=()=>location.reload();
+}
 try{
- const [data,gltf,hdr]=await Promise.all([fetch('assets/reference-cameras.json').then(r=>{if(!r.ok)throw Error('Camera data unavailable');return r.json()}),new GLTFLoader().loadAsync('assets/scorpio-accessories.glb?v=rail-contact-3'),new HDRLoader().loadAsync('assets/studio-small-09.hdr')]);reference=data;model=gltf.scene;crossbars=model.getObjectByName('ACCESSORY_CROSSBARS');carrier=model.getObjectByName('ACCESSORY_CARRIER');proxy=model.getObjectByName('CAR_PROXY');if(!crossbars||!carrier||!proxy)throw Error('Accessory assembly incomplete');
- const pmrem=new THREE.PMREMGenerator(renderer);scene.environment=pmrem.fromEquirectangular(hdr).texture;scene.environmentIntensity=.65;hdr.dispose();pmrem.dispose();model.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true;}});proxy.material=new THREE.MeshBasicMaterial({colorWrite:false,depthWrite:true});proxy.castShadow=false;proxy.receiveShadow=true;scene.add(model);
- await setFrame(9);let saved='factory';try{saved=localStorage.getItem('scorpio-accessory-prototype-v2')||'factory'}catch{}selectVariant(saved,false);ready=true;size();render();$('loading').hidden=true;document.querySelector('#options fieldset').disabled=false;document.querySelectorAll('button').forEach(b=>b.disabled=false);
- window.prototypeApp={model,camera,renderer,scene,background,photo,crossbars,carrier,proxy,reference,setFrame,setView,selectVariant,render,get frame(){return frame},get variant(){return variant},get compare(){return compare},get zoom(){return zoom},get readyFrames(){return images.size},get bounds(){return new THREE.Box3().setFromObject(model)}};
- // Bounded background loading, beginning near the visible view. Keep original frames crisp.
- const queue=Array.from({length:72},(_,i)=>wrap(i+9));let cursor=0;Promise.all(Array.from({length:4},async()=>{while(cursor<queue.length){const n=queue[cursor++];const response=await fetch(`${carBase}${String(n).padStart(3,'0')}.webp`,{cache:'force-cache'});if(!response.ok)throw Error('Rotation image unavailable');await response.blob();}})).then(()=>window.prototypeApp.rotationReady=true).catch(e=>console.error(e));
-}catch(e){console.error(e);$('loading').hidden=false;$('loading').innerHTML='<strong>The preview could not be loaded.</strong><span>Check the local image and accessory assets, then reload.</span>';}
-renderer.setAnimationLoop(time=>{if(auto&&time-lastAuto>=110){lastAuto=time;setFrame(desiredFrame+1)}if(dirty||renderer.shadowMap.needsUpdate)render()});
+ const [data,gltf,hdr]=await Promise.all([
+  fetch('assets/reference-cameras.json').then(response=>{if(!response.ok)throw Error('Camera data unavailable');return response.json()}),
+  new GLTFLoader().loadAsync('assets/scorpio-accessories.glb?v=rail-contact-3'),
+  new HDRLoader().loadAsync('assets/studio-small-09.hdr'),prepareFrame(9)
+ ]);
+ reference=data;poses=reference.frames.map(item=>{const matrix=new THREE.Matrix4().set(...item.transform_matrix.flat()),position=new THREE.Vector3(),quaternion=new THREE.Quaternion();matrix.decompose(position,quaternion,new THREE.Vector3());return{position,quaternion}});
+ model=gltf.scene;crossbars=model.getObjectByName('ACCESSORY_CROSSBARS');carrier=model.getObjectByName('ACCESSORY_CARRIER');proxy=model.getObjectByName('CAR_PROXY');
+ if(!crossbars||!carrier||!proxy)throw Error('Accessory assembly incomplete');
+ const pmrem=new THREE.PMREMGenerator(renderer);scene.environment=pmrem.fromEquirectangular(hdr).texture;scene.environmentIntensity=.65;hdr.dispose();pmrem.dispose();
+ proxy.material=new THREE.MeshBasicMaterial({colorWrite:false,depthWrite:true});scene.add(model);
+ let saved='factory';try{saved=localStorage.getItem('scorpio-accessory-prototype-v2')||'factory'}catch{}selectVariant(saved,false);
+ displayReady=true;setFrame(9);imageMaterial.needsUpdate=true;size();render();$('poster').hidden=true;
+ // Prepare every lightweight angle and both accessory shaders before enabling input.
+ crossbars.visible=true;carrier.visible=true;
+ const compile=Promise.all([renderer.compileAsync(scene,camera),renderer.compileAsync(background,screenCamera)]);
+ const order=Array.from({length:72},(_,i)=>i).sort((a,b)=>Math.min(wrap(a-9),wrap(9-a))-Math.min(wrap(b-9),wrap(9-b)));
+ let cursor=0;const workers=Array.from({length:4},async()=>{while(cursor<order.length)await prepareFrame(order[cursor++])});
+ await Promise.all([compile,...workers]);
+ ready=true;applyVisibility();render();$('loading').hidden=true;canvas.setAttribute('aria-busy','false');
+ document.querySelector('#options fieldset').disabled=false;document.querySelectorAll('button').forEach(button=>button.disabled=false);
+ window.prototypeApp={model,camera,renderer,scene,background,photo,crossbars,carrier,proxy,reference,setFrame,setView,selectVariant,render,
+  rotationReady:true,get frame(){return frame},get variant(){return variant},get compare(){return compare},get zoom(){return zoom},
+  get readyFrames(){return previewTextures.size},get usingDetail(){return usingDetail},get bounds(){return new THREE.Box3().setFromObject(model)}};
+ scheduleDetail();
+}catch(error){console.error(error);showLoadingError()}

@@ -1,0 +1,378 @@
+{
+  "version": "model-ready-4",
+  "views": 72,
+  "desktop_size": [
+    960,
+    540
+  ],
+  "mobile_size": [
+    640,
+    360
+  ],
+  "encoding": "WebP quality88 from the original source frames; no generated or reconstructed car appearance",
+  "desktop_bytes": 3592894,
+  "mobile_bytes": 1912332,
+  "detail": "Original lossless 2400x1350 (desktop) or1200x675 (mobile) source image requested only for the current idle view",
+  "frames": [
+    {
+      "frame": 0,
+      "preview": 32224,
+      "mobile": 17478
+    },
+    {
+      "frame": 1,
+      "preview": 34502,
+      "mobile": 18198
+    },
+    {
+      "frame": 2,
+      "preview": 38048,
+      "mobile": 20084
+    },
+    {
+      "frame": 3,
+      "preview": 42222,
+      "mobile": 22620
+    },
+    {
+      "frame": 4,
+      "preview": 46448,
+      "mobile": 24794
+    },
+    {
+      "frame": 5,
+      "preview": 50144,
+      "mobile": 26508
+    },
+    {
+      "frame": 6,
+      "preview": 53170,
+      "mobile": 27850
+    },
+    {
+      "frame": 7,
+      "preview": 56054,
+      "mobile": 29222
+    },
+    {
+      "frame": 8,
+      "preview": 58178,
+      "mobile": 30464
+    },
+    {
+      "frame": 9,
+      "preview": 59760,
+      "mobile": 31244
+    },
+    {
+      "frame": 10,
+      "preview": 60114,
+      "mobile": 31778
+    },
+    {
+      "frame": 11,
+      "preview": 61490,
+      "mobile": 32362
+    },
+    {
+      "frame": 12,
+      "preview": 62308,
+      "mobile": 32456
+    },
+    {
+      "frame": 13,
+      "preview": 62340,
+      "mobile": 32226
+    },
+    {
+      "frame": 14,
+      "preview": 61988,
+      "mobile": 32328
+    },
+    {
+      "frame": 15,
+      "preview": 61864,
+      "mobile": 32076
+    },
+    {
+      "frame": 16,
+      "preview": 61526,
+      "mobile": 31736
+    },
+    {
+      "frame": 17,
+      "preview": 59928,
+      "mobile": 30746
+    },
+    {
+      "frame": 18,
+      "preview": 59684,
+      "mobile": 30432
+    },
+    {
+      "frame": 19,
+      "preview": 59372,
+      "mobile": 30200
+    },
+    {
+      "frame": 20,
+      "preview": 59230,
+      "mobile": 30352
+    },
+    {
+      "frame": 21,
+      "preview": 60408,
+      "mobile": 31108
+    },
+    {
+      "frame": 22,
+      "preview": 60466,
+      "mobile": 31186
+    },
+    {
+      "frame": 23,
+      "preview": 61710,
+      "mobile": 31826
+    },
+    {
+      "frame": 24,
+      "preview": 61640,
+      "mobile": 31848
+    },
+    {
+      "frame": 25,
+      "preview": 60550,
+      "mobile": 31258
+    },
+    {
+      "frame": 26,
+      "preview": 58820,
+      "mobile": 30550
+    },
+    {
+      "frame": 27,
+      "preview": 57344,
+      "mobile": 29924
+    },
+    {
+      "frame": 28,
+      "preview": 55676,
+      "mobile": 29318
+    },
+    {
+      "frame": 29,
+      "preview": 53582,
+      "mobile": 27958
+    },
+    {
+      "frame": 30,
+      "preview": 51440,
+      "mobile": 27212
+    },
+    {
+      "frame": 31,
+      "preview": 48754,
+      "mobile": 25452
+    },
+    {
+      "frame": 32,
+      "preview": 45192,
+      "mobile": 23924
+    },
+    {
+      "frame": 33,
+      "preview": 42372,
+      "mobile": 22404
+    },
+    {
+      "frame": 34,
+      "preview": 38586,
+      "mobile": 20326
+    },
+    {
+      "frame": 35,
+      "preview": 34360,
+      "mobile": 18072
+    },
+    {
+      "frame": 36,
+      "preview": 33398,
+      "mobile": 17054
+    },
+    {
+      "frame": 37,
+      "preview": 34316,
+      "mobile": 17872
+    },
+    {
+      "frame": 38,
+      "preview": 37684,
+      "mobile": 20142
+    },
+    {
+      "frame": 39,
+      "preview": 40738,
+      "mobile": 22192
+    },
+    {
+      "frame": 40,
+      "preview": 43234,
+      "mobile": 23674
+    },
+    {
+      "frame": 41,
+      "preview": 44978,
+      "mobile": 24672
+    },
+    {
+      "frame": 42,
+      "preview": 46736,
+      "mobile": 25340
+    },
+    {
+      "frame": 43,
+      "preview": 47768,
+      "mobile": 26120
+    },
+    {
+      "frame": 44,
+      "preview": 49068,
+      "mobile": 26688
+    },
+    {
+      "frame": 45,
+      "preview": 49490,
+      "mobile": 27718
+    },
+    {
+      "frame": 46,
+      "preview": 51014,
+      "mobile": 28150
+    },
+    {
+      "frame": 47,
+      "preview": 50628,
+      "mobile": 28288
+    },
+    {
+      "frame": 48,
+      "preview": 51048,
+      "mobile": 28088
+    },
+    {
+      "frame": 49,
+      "preview": 49896,
+      "mobile": 27964
+    },
+    {
+      "frame": 50,
+      "preview": 49478,
+      "mobile": 27030
+    },
+    {
+      "frame": 51,
+      "preview": 49760,
+      "mobile": 27186
+    },
+    {
+      "frame": 52,
+      "preview": 49986,
+      "mobile": 26884
+    },
+    {
+      "frame": 53,
+      "preview": 48904,
+      "mobile": 26364
+    },
+    {
+      "frame": 54,
+      "preview": 48668,
+      "mobile": 26292
+    },
+    {
+      "frame": 55,
+      "preview": 48442,
+      "mobile": 25984
+    },
+    {
+      "frame": 56,
+      "preview": 48554,
+      "mobile": 26154
+    },
+    {
+      "frame": 57,
+      "preview": 49398,
+      "mobile": 26966
+    },
+    {
+      "frame": 58,
+      "preview": 50396,
+      "mobile": 27446
+    },
+    {
+      "frame": 59,
+      "preview": 50474,
+      "mobile": 27426
+    },
+    {
+      "frame": 60,
+      "preview": 50390,
+      "mobile": 27596
+    },
+    {
+      "frame": 61,
+      "preview": 49922,
+      "mobile": 27696
+    },
+    {
+      "frame": 62,
+      "preview": 49442,
+      "mobile": 27264
+    },
+    {
+      "frame": 63,
+      "preview": 49136,
+      "mobile": 26968
+    },
+    {
+      "frame": 64,
+      "preview": 48398,
+      "mobile": 26700
+    },
+    {
+      "frame": 65,
+      "preview": 46932,
+      "mobile": 25770
+    },
+    {
+      "frame": 66,
+      "preview": 45890,
+      "mobile": 24908
+    },
+    {
+      "frame": 67,
+      "preview": 44114,
+      "mobile": 24072
+    },
+    {
+      "frame": 68,
+      "preview": 42274,
+      "mobile": 22808
+    },
+    {
+      "frame": 69,
+      "preview": 39550,
+      "mobile": 21488
+    },
+    {
+      "frame": 70,
+      "preview": 37186,
+      "mobile": 19744
+    },
+    {
+      "frame": 71,
+      "preview": 34110,
+      "mobile": 18104
+    }
+  ]
+}

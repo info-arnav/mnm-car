@@ -1,5 +1,5 @@
 {
-  "representation": "Original source car frames, lossless WebP after resize to2400x1350; separate calibrated 3D accessory overlay",
+  "representation": "Original source frames with calibrated 3D overlays; compact preview frames for rotation and original lossless source detail for the current idle view",
   "views": 72,
   "source_dimensions": [
     3840,
@@ -449,5 +449,21 @@
     "A source-image sequence is not an editable 3D car mesh",
     "Overlay depth comes from an approximate silhouette hull",
     "Accessory dimensions, hidden hardware and applicability to panoramic roof variant remain inferred"
-  ]
+  ],
+  "rotation_previews": {
+    "version": "model-ready-4",
+    "views": 72,
+    "desktop_size": [
+      960,
+      540
+    ],
+    "mobile_size": [
+      640,
+      360
+    ],
+    "encoding": "WebP quality88 from the original source frames; no generated or reconstructed car appearance",
+    "desktop_bytes": 3592894,
+    "mobile_bytes": 1912332,
+    "detail": "Original lossless 2400x1350 (desktop) or1200x675 (mobile) source image requested only for the current idle view"
+  }
 }

@@ -19,5 +19,7 @@
   "selected_viewer": "Original source car images plus calibrated native 3D accessory overlays",
   "car_body_display": "72 source frames; lossless WebP after resize, no reconstructed body rendered",
   "native_car_mesh_status": "Unapproved; not used as the visible car",
-  "accessory_assembly": "Scorpio_N_Photo_Assembly.blend"
+  "accessory_assembly": "Scorpio_N_Photo_Assembly.blend",
+  "roof_contact_revision": "Rail-conforming carrier perimeter, downturned ends, seated contact envelopes; removed prior whole-assembly lift",
+  "rail_profile_evidence": "geometry/factory-rail-fit.json"
 }
