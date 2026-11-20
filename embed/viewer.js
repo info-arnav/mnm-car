@@ -1,17 +1,20 @@
 import * as THREE from '../vendor/three.module.js';
+import {createColourController} from '../colours.js?v=colours-1';
 const params=new URL(location.href).searchParams,model=(params.get('id')||'SCN').trim().toUpperCase();
 const $=id=>document.getElementById(id),host=$('viewer'),canvas=$('car');
 let parentOrigin='*';try{const candidate=new URL(params.get('parentOrigin'));if(/^https?:$/.test(candidate.protocol))parentOrigin=candidate.origin}catch{}
 const notify=type=>{if(parent!==window)parent.postMessage({namespace:'digiiq-3d-viewer',type,model},parentOrigin)};
 let ready=false,active=true,frame=-1,zoom=1,auto=false,raf,autoRaf,lastAuto=0,detailTimer,controller,generation=0,gesture;
-const pointers=new Map(),textures=new Map(),images=new Map(),details=new Map();
+const pointers=new Map(),images=new Map(),details=new Map();
+let textures=new Map(),colours;
 const small=matchMedia('(max-width:760px)').matches,assets=new URL(['localhost','127.0.0.1','[::1]'].includes(location.hostname)?'../assets/':'https://mnm-car.digiiq.ai/assets/',import.meta.url);
-const preview=new URL(small?'rotation/mobile/':'rotation/preview/',assets),detail=new URL(small?'car/mobile/':'car/',assets);
+const preview=new URL(small?'rotation/mobile/':'rotation/preview/',assets);
+let detail=new URL(small?'car/mobile/':'car/',assets);
 const frameFile=n=>String(n).padStart(3,'0')+'.webp',wrap=n=>((Math.round(n)%72)+72)%72;
 let renderer,scene,camera,photo,material,usingDetail=false;
 function draw(){if(!renderer||!material.map)return;renderer.render(scene,camera)}
 function requestDraw(){if(raf||!active||document.hidden)return;raf=requestAnimationFrame(()=>{raf=0;draw()})}
-function projection(){if(!renderer)return;const box=host.getBoundingClientRect();if(!box.width||!box.height)return;renderer.setSize(box.width,box.height,false);const fit=Math.min(box.width/16,box.height/9)*zoom;photo.scale.set(16*fit/box.width,9*fit/box.height,1);requestDraw()}
+function projection(){if(!renderer)return;const box=host.getBoundingClientRect();if(!box.width||!box.height)return;renderer.setSize(box.width,box.height,false);const viewHeight=Math.max(180,box.height-96),fit=Math.min(box.width/16,viewHeight/9)*zoom;photo.scale.set(16*fit/box.width,9*fit/box.height,1);photo.position.y=96/box.height;requestDraw()}
 function makeTexture(image,sharp=false){const texture=new THREE.Texture(image);texture.colorSpace=THREE.SRGBColorSpace;texture.minFilter=sharp?THREE.LinearMipmapLinearFilter:THREE.LinearFilter;texture.magFilter=THREE.LinearFilter;texture.generateMipmaps=sharp;texture.needsUpdate=true;renderer.initTexture(texture);return texture}
 function cancelDetail(){clearTimeout(detailTimer);controller?.abort();controller=null;generation++}
 function scheduleDetail(){clearTimeout(detailTimer);if(!ready||auto||pointers.size||!active||document.hidden)return;if(details.has(frame)){material.map=details.get(frame).texture;usingDetail=true;requestDraw();return}detailTimer=setTimeout(()=>loadDetail(frame),240)}
@@ -41,5 +44,6 @@ try{
  const order=Array.from({length:72},(_,i)=>i).sort((a,b)=>Math.min(wrap(a-9),wrap(9-a))-Math.min(wrap(b-9),wrap(9-b)));
  let cursor=0;await Promise.all(Array.from({length:4},async()=>{while(cursor<order.length){const n=order[cursor++],image=new Image();image.crossOrigin='anonymous';image.decoding='async';image.src=new URL(frameFile(n),preview).href;await image.decode();await new Promise(requestAnimationFrame);images.set(n,image);textures.set(n,makeTexture(image));if(n===9){setFrame(9);material.needsUpdate=true;draw()}notify('progress')}}));
  await renderer.compileAsync(scene,camera);ready=true;setFrame(9);draw();$('loading').hidden=true;canvas.setAttribute('aria-busy','false');host.querySelectorAll('button').forEach(button=>button.disabled=false);notify('ready');scheduleDetail();
- window.DigiiqCarViewer={model,setFrame,setZoom,setAuto,renderer,get ready(){return ready},get readyFrames(){return textures.size},get frame(){return frame},get zoom(){return zoom},get usingDetail(){return usingDetail}};
+ colours=createColourController({THREE,renderer,assets,mobile:small,initialTextures:textures,root:$('colours'),onProgress:()=>notify('progress'),onSwap:next=>{cancelDetail();for(const item of details.values()){item.texture.dispose();URL.revokeObjectURL(item.url)}details.clear();textures=next.textures;images.clear();detail=next.detail;usingDetail=false;material.map=textures.get(frame);canvas.setAttribute('aria-label',`${next.name} Scorpio-N. Drag to rotate.`);requestDraw();scheduleDetail()}});
+ window.DigiiqCarViewer={get colour(){return colours.colour},get loadingColour(){return colours.loading},get cachedColours(){return colours.cachedColours},selectColour:id=>colours.select(id),model,setFrame,setZoom,setAuto,renderer,get ready(){return ready},get readyFrames(){return textures.size},get frame(){return frame},get zoom(){return zoom},get usingDetail(){return usingDetail}};
 }catch(error){console.error(error);fail(model==='SCN'?'Couldn’t load the model.':'This model is unavailable.')}

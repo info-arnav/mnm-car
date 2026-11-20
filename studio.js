@@ -1,11 +1,12 @@
 import * as THREE from 'three';
+import {createColourController} from './colours.js?v=colours-1';
 import {GLTFLoader} from './vendor/GLTFLoader.js';
 import {HDRLoader} from './vendor/HDRLoader.js';
 
 const $=id=>document.getElementById(id),stage=$('stage'),canvas=$('vehicle');
 const mobile=matchMedia('(max-width:760px)').matches;
 const previewBase=mobile?'assets/rotation/mobile/':'assets/rotation/preview/';
-const detailBase=mobile?'assets/car/mobile/':'assets/car/';
+let detailBase=mobile?'assets/car/mobile/':'assets/car/',colours;
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false,preserveDrawingBuffer:true});
 renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
 renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.AgXToneMapping;renderer.autoClear=false;
@@ -16,7 +17,8 @@ const camera=new THREE.PerspectiveCamera(13,1,.1,100),screenCamera=new THREE.Ort
 const imageMaterial=new THREE.MeshBasicMaterial({transparent:true,toneMapped:false,depthWrite:false,depthTest:false});
 const photo=new THREE.Mesh(new THREE.PlaneGeometry(2,2),imageMaterial);background.add(photo);
 const key=new THREE.DirectionalLight(0xfffbf7,2);key.position.set(4,8,-3);scene.add(key,new THREE.HemisphereLight(0xe9f1f4,0x697065,.45));
-const previews=new Map(),previewTextures=new Map(),details=new Map(),pointers=new Map();
+const previews=new Map(),details=new Map(),pointers=new Map();
+let previewTextures=new Map();
 const configuration={
  factory:{title:'Standard roof',count:'No added accessories',description:'Keep the original roof rails on your Scorpio-N.'},
  crossbars:{title:'Roof crossbars',count:'1 accessory',description:'Aluminium crossbars with a clean black finish at the mounts.'},
@@ -67,7 +69,7 @@ async function loadDetail(n){
  const generation=++detailGeneration;detailController?.abort();const controller=new AbortController();detailController=controller;
  let url;
  try{
-  const response=await fetch(detailBase+frameName(n),{signal:controller.signal,cache:'force-cache'});
+  const response=await fetch(new URL(frameName(n),new URL(detailBase,location.href)),{signal:controller.signal,cache:'force-cache'});
   if(!response.ok)throw Error('Image unavailable');
   const blob=await response.blob();url=URL.createObjectURL(blob);
   const image=new Image();image.decoding='async';image.src=url;await image.decode();
@@ -133,7 +135,7 @@ $('auto-rotate').onclick=()=>setAuto(!auto);
 $('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.querySelector('.stage-wrap').requestFullscreen()}catch{notify('Fullscreen is unavailable in this browser.')}};
 $('finish').onclick=()=>{compare=!compare;applyVisibility();$('finish').textContent=compare?'Return to your selection':'View without accessories';$('finish').setAttribute('aria-pressed',String(compare))};
 $('reset').onclick=()=>{selectVariant('factory');setView('quarter');notify('Your selection has been reset.')};
-$('capture').onclick=()=>{render();canvas.toBlob(blob=>{if(!blob)return;const link=document.createElement('a'),url=URL.createObjectURL(blob);link.href=url;link.download=`Scorpio-N-${variant}.png`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);notify('Image saved.')},'image/png')};
+$('capture').onclick=()=>{render();canvas.toBlob(blob=>{if(!blob)return;const link=document.createElement('a'),url=URL.createObjectURL(blob);link.href=url;link.download=`Scorpio-N-${colours?.colour||'deep-forest'}-${variant}.png`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);notify('Image saved.')},'image/png')};
 canvas.addEventListener('pointerdown',event=>{
  if(!ready)return;event.preventDefault();setAuto(false);cancelDetail();canvas.setPointerCapture(event.pointerId);
  pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});dragFrame=desiredFrame;gesture={x:event.clientX,frame:dragFrame};
@@ -181,7 +183,8 @@ try{
  await Promise.all([compile,...workers]);
  ready=true;applyVisibility();render();$('loading').hidden=true;canvas.setAttribute('aria-busy','false');
  document.querySelector('#options fieldset').disabled=false;document.querySelectorAll('button').forEach(button=>button.disabled=false);
- window.prototypeApp={model,camera,renderer,scene,background,photo,crossbars,carrier,proxy,reference,setFrame,setView,selectVariant,render,
+ colours=createColourController({THREE,renderer,assets:new URL('assets/',location.href),mobile,initialTextures:previewTextures,root:$('colours'),onSwap:next=>{cancelDetail();for(const item of details.values())releaseDetail(item);details.clear();previews.clear();previewTextures=next.textures;detailBase=next.detail.href;usingDetail=false;imageMaterial.map=previewTextures.get(frame);$('colour-label-name').textContent=next.name.toUpperCase();$('colour-label-dot').style.background=getComputedStyle(document.querySelector(`[aria-label="${next.name}"]`)).getPropertyValue('--swatch');canvas.setAttribute('aria-label',`${next.name} Scorpio-N. Drag to rotate and scroll or pinch to zoom.`);requestRender();scheduleDetail()}});
+ window.prototypeApp={get colour(){return colours.colour},get loadingColour(){return colours.loading},get cachedColours(){return colours.cachedColours},selectColour:id=>colours.select(id),model,camera,renderer,scene,background,photo,crossbars,carrier,proxy,reference,setFrame,setView,selectVariant,render,
   rotationReady:true,get frame(){return frame},get variant(){return variant},get compare(){return compare},get zoom(){return zoom},
   get readyFrames(){return previewTextures.size},get usingDetail(){return usingDetail},get bounds(){return new THREE.Box3().setFromObject(model)}};
  scheduleDetail();

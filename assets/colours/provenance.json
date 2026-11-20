@@ -1,0 +1,2893 @@
+{
+  "views": 72,
+  "source": "User supplied Exterior_360 colour PNGs, 3840x2160 RGBA",
+  "processing": "Same uncropped frame and alpha; resize only; lightweight WebP rotation and lossless WebP idle detail. Index72 excluded consistently with original72-view viewer.",
+  "colours": [
+    "Everest_White",
+    "Galaxy_Grey",
+    "Oceanic_Blue",
+    "Stealth_Black"
+  ],
+  "frames": [
+    {
+      "colour": "Everest_White",
+      "frame": 0,
+      "bytes": {
+        "preview": 32182,
+        "mobile": 17400,
+        "detail": 552278,
+        "detail-mobile": 137416
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 1,
+      "bytes": {
+        "preview": 34244,
+        "mobile": 18192,
+        "detail": 583038,
+        "detail-mobile": 147340
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 2,
+      "bytes": {
+        "preview": 37732,
+        "mobile": 20114,
+        "detail": 654434,
+        "detail-mobile": 165998
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 3,
+      "bytes": {
+        "preview": 42210,
+        "mobile": 22490,
+        "detail": 734400,
+        "detail-mobile": 187502
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 4,
+      "bytes": {
+        "preview": 46120,
+        "mobile": 24754,
+        "detail": 816022,
+        "detail-mobile": 207200
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 5,
+      "bytes": {
+        "preview": 49860,
+        "mobile": 26636,
+        "detail": 894866,
+        "detail-mobile": 228204
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 6,
+      "bytes": {
+        "preview": 53232,
+        "mobile": 28052,
+        "detail": 963874,
+        "detail-mobile": 244594
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 7,
+      "bytes": {
+        "preview": 56122,
+        "mobile": 29818,
+        "detail": 1022492,
+        "detail-mobile": 258736
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 8,
+      "bytes": {
+        "preview": 59188,
+        "mobile": 31102,
+        "detail": 1066386,
+        "detail-mobile": 269392
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 9,
+      "bytes": {
+        "preview": 60792,
+        "mobile": 32252,
+        "detail": 1106006,
+        "detail-mobile": 278526
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 10,
+      "bytes": {
+        "preview": 62104,
+        "mobile": 32930,
+        "detail": 1133750,
+        "detail-mobile": 285498
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 11,
+      "bytes": {
+        "preview": 63280,
+        "mobile": 33448,
+        "detail": 1154820,
+        "detail-mobile": 288056
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 12,
+      "bytes": {
+        "preview": 63660,
+        "mobile": 33632,
+        "detail": 1166758,
+        "detail-mobile": 289516
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 13,
+      "bytes": {
+        "preview": 64102,
+        "mobile": 33446,
+        "detail": 1170810,
+        "detail-mobile": 288898
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 14,
+      "bytes": {
+        "preview": 63278,
+        "mobile": 33134,
+        "detail": 1175906,
+        "detail-mobile": 289320
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 15,
+      "bytes": {
+        "preview": 63214,
+        "mobile": 32990,
+        "detail": 1177976,
+        "detail-mobile": 288166
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 16,
+      "bytes": {
+        "preview": 62376,
+        "mobile": 32744,
+        "detail": 1178158,
+        "detail-mobile": 286194
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 17,
+      "bytes": {
+        "preview": 60588,
+        "mobile": 31860,
+        "detail": 1176216,
+        "detail-mobile": 281862
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 18,
+      "bytes": {
+        "preview": 60614,
+        "mobile": 31172,
+        "detail": 1176362,
+        "detail-mobile": 280284
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 19,
+      "bytes": {
+        "preview": 60404,
+        "mobile": 31344,
+        "detail": 1178836,
+        "detail-mobile": 281062
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 20,
+      "bytes": {
+        "preview": 60418,
+        "mobile": 31382,
+        "detail": 1177126,
+        "detail-mobile": 281900
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 21,
+      "bytes": {
+        "preview": 61570,
+        "mobile": 32174,
+        "detail": 1186308,
+        "detail-mobile": 286400
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 22,
+      "bytes": {
+        "preview": 61792,
+        "mobile": 32190,
+        "detail": 1182262,
+        "detail-mobile": 286732
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 23,
+      "bytes": {
+        "preview": 62540,
+        "mobile": 32792,
+        "detail": 1183214,
+        "detail-mobile": 287980
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 24,
+      "bytes": {
+        "preview": 62304,
+        "mobile": 32744,
+        "detail": 1176358,
+        "detail-mobile": 288572
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 25,
+      "bytes": {
+        "preview": 61612,
+        "mobile": 32280,
+        "detail": 1160838,
+        "detail-mobile": 285382
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 26,
+      "bytes": {
+        "preview": 60296,
+        "mobile": 32008,
+        "detail": 1133494,
+        "detail-mobile": 279426
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 27,
+      "bytes": {
+        "preview": 58684,
+        "mobile": 30700,
+        "detail": 1100294,
+        "detail-mobile": 272636
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 28,
+      "bytes": {
+        "preview": 56478,
+        "mobile": 30202,
+        "detail": 1061062,
+        "detail-mobile": 264828
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 29,
+      "bytes": {
+        "preview": 54484,
+        "mobile": 28818,
+        "detail": 1018888,
+        "detail-mobile": 254076
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 30,
+      "bytes": {
+        "preview": 52054,
+        "mobile": 27722,
+        "detail": 974764,
+        "detail-mobile": 243926
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 31,
+      "bytes": {
+        "preview": 49224,
+        "mobile": 25980,
+        "detail": 920296,
+        "detail-mobile": 228956
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 32,
+      "bytes": {
+        "preview": 45646,
+        "mobile": 24260,
+        "detail": 861484,
+        "detail-mobile": 213880
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 33,
+      "bytes": {
+        "preview": 42390,
+        "mobile": 22854,
+        "detail": 790114,
+        "detail-mobile": 195476
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 34,
+      "bytes": {
+        "preview": 38738,
+        "mobile": 20786,
+        "detail": 718112,
+        "detail-mobile": 177016
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 35,
+      "bytes": {
+        "preview": 34756,
+        "mobile": 18598,
+        "detail": 645206,
+        "detail-mobile": 156690
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 36,
+      "bytes": {
+        "preview": 33852,
+        "mobile": 17660,
+        "detail": 621750,
+        "detail-mobile": 149608
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 37,
+      "bytes": {
+        "preview": 34818,
+        "mobile": 18434,
+        "detail": 644618,
+        "detail-mobile": 156588
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 38,
+      "bytes": {
+        "preview": 38188,
+        "mobile": 20458,
+        "detail": 712350,
+        "detail-mobile": 176274
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 39,
+      "bytes": {
+        "preview": 41252,
+        "mobile": 22490,
+        "detail": 777806,
+        "detail-mobile": 193782
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 40,
+      "bytes": {
+        "preview": 43698,
+        "mobile": 23930,
+        "detail": 834352,
+        "detail-mobile": 209066
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 41,
+      "bytes": {
+        "preview": 45624,
+        "mobile": 25020,
+        "detail": 884222,
+        "detail-mobile": 222060
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 42,
+      "bytes": {
+        "preview": 47574,
+        "mobile": 26146,
+        "detail": 923570,
+        "detail-mobile": 232052
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 43,
+      "bytes": {
+        "preview": 48630,
+        "mobile": 26706,
+        "detail": 958384,
+        "detail-mobile": 241536
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 44,
+      "bytes": {
+        "preview": 50826,
+        "mobile": 27734,
+        "detail": 989478,
+        "detail-mobile": 248714
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 45,
+      "bytes": {
+        "preview": 50666,
+        "mobile": 28394,
+        "detail": 1011778,
+        "detail-mobile": 253390
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 46,
+      "bytes": {
+        "preview": 52396,
+        "mobile": 29054,
+        "detail": 1034450,
+        "detail-mobile": 258872
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 47,
+      "bytes": {
+        "preview": 52446,
+        "mobile": 29258,
+        "detail": 1048002,
+        "detail-mobile": 262700
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 48,
+      "bytes": {
+        "preview": 52474,
+        "mobile": 29054,
+        "detail": 1055676,
+        "detail-mobile": 261704
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 49,
+      "bytes": {
+        "preview": 52086,
+        "mobile": 28622,
+        "detail": 1054366,
+        "detail-mobile": 260498
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 50,
+      "bytes": {
+        "preview": 50818,
+        "mobile": 27954,
+        "detail": 1045324,
+        "detail-mobile": 258602
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 51,
+      "bytes": {
+        "preview": 51042,
+        "mobile": 27922,
+        "detail": 1043872,
+        "detail-mobile": 256876
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 52,
+      "bytes": {
+        "preview": 50926,
+        "mobile": 27562,
+        "detail": 1036194,
+        "detail-mobile": 255118
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 53,
+      "bytes": {
+        "preview": 50172,
+        "mobile": 27326,
+        "detail": 1031390,
+        "detail-mobile": 251478
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 54,
+      "bytes": {
+        "preview": 50024,
+        "mobile": 27164,
+        "detail": 1027324,
+        "detail-mobile": 250154
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 55,
+      "bytes": {
+        "preview": 49726,
+        "mobile": 26958,
+        "detail": 1012950,
+        "detail-mobile": 248426
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 56,
+      "bytes": {
+        "preview": 49758,
+        "mobile": 27148,
+        "detail": 1012154,
+        "detail-mobile": 249782
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 57,
+      "bytes": {
+        "preview": 50634,
+        "mobile": 27962,
+        "detail": 1017294,
+        "detail-mobile": 252254
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 58,
+      "bytes": {
+        "preview": 51552,
+        "mobile": 28168,
+        "detail": 1027614,
+        "detail-mobile": 254680
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 59,
+      "bytes": {
+        "preview": 51996,
+        "mobile": 28546,
+        "detail": 1022310,
+        "detail-mobile": 255092
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 60,
+      "bytes": {
+        "preview": 51742,
+        "mobile": 28594,
+        "detail": 1012478,
+        "detail-mobile": 254338
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 61,
+      "bytes": {
+        "preview": 50730,
+        "mobile": 28596,
+        "detail": 995016,
+        "detail-mobile": 252764
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 62,
+      "bytes": {
+        "preview": 50320,
+        "mobile": 28174,
+        "detail": 974604,
+        "detail-mobile": 247560
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 63,
+      "bytes": {
+        "preview": 50144,
+        "mobile": 27426,
+        "detail": 950334,
+        "detail-mobile": 243420
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 64,
+      "bytes": {
+        "preview": 48704,
+        "mobile": 27190,
+        "detail": 922964,
+        "detail-mobile": 237304
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 65,
+      "bytes": {
+        "preview": 46736,
+        "mobile": 26138,
+        "detail": 885066,
+        "detail-mobile": 227146
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 66,
+      "bytes": {
+        "preview": 45698,
+        "mobile": 25076,
+        "detail": 846636,
+        "detail-mobile": 218326
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 67,
+      "bytes": {
+        "preview": 43696,
+        "mobile": 24134,
+        "detail": 798706,
+        "detail-mobile": 206006
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 68,
+      "bytes": {
+        "preview": 41832,
+        "mobile": 22888,
+        "detail": 751412,
+        "detail-mobile": 192974
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 69,
+      "bytes": {
+        "preview": 39220,
+        "mobile": 21428,
+        "detail": 692866,
+        "detail-mobile": 177572
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 70,
+      "bytes": {
+        "preview": 36940,
+        "mobile": 19782,
+        "detail": 634728,
+        "detail-mobile": 161464
+      }
+    },
+    {
+      "colour": "Everest_White",
+      "frame": 71,
+      "bytes": {
+        "preview": 33688,
+        "mobile": 18154,
+        "detail": 578478,
+        "detail-mobile": 144726
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 0,
+      "bytes": {
+        "preview": 31770,
+        "mobile": 17196,
+        "detail": 572100,
+        "detail-mobile": 140630
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 1,
+      "bytes": {
+        "preview": 33822,
+        "mobile": 17724,
+        "detail": 601048,
+        "detail-mobile": 151068
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 2,
+      "bytes": {
+        "preview": 37328,
+        "mobile": 19890,
+        "detail": 676936,
+        "detail-mobile": 169590
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 3,
+      "bytes": {
+        "preview": 41346,
+        "mobile": 22148,
+        "detail": 764592,
+        "detail-mobile": 191722
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 4,
+      "bytes": {
+        "preview": 45248,
+        "mobile": 24486,
+        "detail": 850026,
+        "detail-mobile": 213244
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 5,
+      "bytes": {
+        "preview": 49210,
+        "mobile": 26040,
+        "detail": 935184,
+        "detail-mobile": 233928
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 6,
+      "bytes": {
+        "preview": 52318,
+        "mobile": 27460,
+        "detail": 1011462,
+        "detail-mobile": 251596
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 7,
+      "bytes": {
+        "preview": 55046,
+        "mobile": 28924,
+        "detail": 1081106,
+        "detail-mobile": 267370
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 8,
+      "bytes": {
+        "preview": 57112,
+        "mobile": 30222,
+        "detail": 1130610,
+        "detail-mobile": 278164
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 9,
+      "bytes": {
+        "preview": 59062,
+        "mobile": 31046,
+        "detail": 1175712,
+        "detail-mobile": 288908
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 10,
+      "bytes": {
+        "preview": 60184,
+        "mobile": 31782,
+        "detail": 1207184,
+        "detail-mobile": 301664
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 11,
+      "bytes": {
+        "preview": 60938,
+        "mobile": 32114,
+        "detail": 1228512,
+        "detail-mobile": 298784
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 12,
+      "bytes": {
+        "preview": 61666,
+        "mobile": 32118,
+        "detail": 1242660,
+        "detail-mobile": 300272
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 13,
+      "bytes": {
+        "preview": 62058,
+        "mobile": 31992,
+        "detail": 1246866,
+        "detail-mobile": 300428
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 14,
+      "bytes": {
+        "preview": 61350,
+        "mobile": 31856,
+        "detail": 1251766,
+        "detail-mobile": 300842
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 15,
+      "bytes": {
+        "preview": 61338,
+        "mobile": 31782,
+        "detail": 1247222,
+        "detail-mobile": 299592
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 16,
+      "bytes": {
+        "preview": 60642,
+        "mobile": 31642,
+        "detail": 1237444,
+        "detail-mobile": 294680
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 17,
+      "bytes": {
+        "preview": 58734,
+        "mobile": 30400,
+        "detail": 1253430,
+        "detail-mobile": 289096
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 18,
+      "bytes": {
+        "preview": 58618,
+        "mobile": 30080,
+        "detail": 1243886,
+        "detail-mobile": 285542
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 19,
+      "bytes": {
+        "preview": 58212,
+        "mobile": 29934,
+        "detail": 1240344,
+        "detail-mobile": 285354
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 20,
+      "bytes": {
+        "preview": 58276,
+        "mobile": 29864,
+        "detail": 1237308,
+        "detail-mobile": 286094
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 21,
+      "bytes": {
+        "preview": 59350,
+        "mobile": 30666,
+        "detail": 1242206,
+        "detail-mobile": 290480
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 22,
+      "bytes": {
+        "preview": 59640,
+        "mobile": 31006,
+        "detail": 1235800,
+        "detail-mobile": 290198
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 23,
+      "bytes": {
+        "preview": 60830,
+        "mobile": 31592,
+        "detail": 1236658,
+        "detail-mobile": 292166
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 24,
+      "bytes": {
+        "preview": 60972,
+        "mobile": 31728,
+        "detail": 1227176,
+        "detail-mobile": 293244
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 25,
+      "bytes": {
+        "preview": 60208,
+        "mobile": 31100,
+        "detail": 1209460,
+        "detail-mobile": 288968
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 26,
+      "bytes": {
+        "preview": 58696,
+        "mobile": 30962,
+        "detail": 1180680,
+        "detail-mobile": 283930
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 27,
+      "bytes": {
+        "preview": 57198,
+        "mobile": 30278,
+        "detail": 1144986,
+        "detail-mobile": 276272
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 28,
+      "bytes": {
+        "preview": 55258,
+        "mobile": 29322,
+        "detail": 1104818,
+        "detail-mobile": 266706
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 29,
+      "bytes": {
+        "preview": 53322,
+        "mobile": 27776,
+        "detail": 1042760,
+        "detail-mobile": 255364
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 30,
+      "bytes": {
+        "preview": 50830,
+        "mobile": 26666,
+        "detail": 993652,
+        "detail-mobile": 245540
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 31,
+      "bytes": {
+        "preview": 48086,
+        "mobile": 25232,
+        "detail": 934938,
+        "detail-mobile": 229714
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 32,
+      "bytes": {
+        "preview": 44262,
+        "mobile": 23654,
+        "detail": 872196,
+        "detail-mobile": 212994
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 33,
+      "bytes": {
+        "preview": 41472,
+        "mobile": 22042,
+        "detail": 795680,
+        "detail-mobile": 196272
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 34,
+      "bytes": {
+        "preview": 37680,
+        "mobile": 20040,
+        "detail": 723596,
+        "detail-mobile": 176194
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 35,
+      "bytes": {
+        "preview": 33694,
+        "mobile": 17832,
+        "detail": 649732,
+        "detail-mobile": 155708
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 36,
+      "bytes": {
+        "preview": 32632,
+        "mobile": 16846,
+        "detail": 621200,
+        "detail-mobile": 148118
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 37,
+      "bytes": {
+        "preview": 33554,
+        "mobile": 17882,
+        "detail": 645396,
+        "detail-mobile": 155998
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 38,
+      "bytes": {
+        "preview": 37052,
+        "mobile": 19774,
+        "detail": 713736,
+        "detail-mobile": 175342
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 39,
+      "bytes": {
+        "preview": 39988,
+        "mobile": 21602,
+        "detail": 782914,
+        "detail-mobile": 193454
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 40,
+      "bytes": {
+        "preview": 42312,
+        "mobile": 23080,
+        "detail": 844244,
+        "detail-mobile": 208216
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 41,
+      "bytes": {
+        "preview": 44456,
+        "mobile": 24380,
+        "detail": 907140,
+        "detail-mobile": 223640
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 42,
+      "bytes": {
+        "preview": 46220,
+        "mobile": 25376,
+        "detail": 952778,
+        "detail-mobile": 235026
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 43,
+      "bytes": {
+        "preview": 47624,
+        "mobile": 26080,
+        "detail": 992382,
+        "detail-mobile": 243746
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 44,
+      "bytes": {
+        "preview": 49564,
+        "mobile": 26896,
+        "detail": 1023580,
+        "detail-mobile": 252470
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 45,
+      "bytes": {
+        "preview": 49396,
+        "mobile": 27702,
+        "detail": 1048218,
+        "detail-mobile": 258026
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 46,
+      "bytes": {
+        "preview": 51112,
+        "mobile": 28124,
+        "detail": 1072134,
+        "detail-mobile": 265608
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 47,
+      "bytes": {
+        "preview": 51198,
+        "mobile": 28194,
+        "detail": 1085006,
+        "detail-mobile": 266444
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 48,
+      "bytes": {
+        "preview": 51114,
+        "mobile": 28000,
+        "detail": 1090956,
+        "detail-mobile": 267756
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 49,
+      "bytes": {
+        "preview": 50676,
+        "mobile": 27858,
+        "detail": 1088190,
+        "detail-mobile": 264540
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 50,
+      "bytes": {
+        "preview": 49350,
+        "mobile": 27112,
+        "detail": 1081530,
+        "detail-mobile": 263774
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 51,
+      "bytes": {
+        "preview": 49524,
+        "mobile": 27184,
+        "detail": 1081004,
+        "detail-mobile": 260156
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 52,
+      "bytes": {
+        "preview": 49502,
+        "mobile": 26844,
+        "detail": 1073106,
+        "detail-mobile": 259492
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 53,
+      "bytes": {
+        "preview": 48572,
+        "mobile": 26482,
+        "detail": 1060640,
+        "detail-mobile": 255582
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 54,
+      "bytes": {
+        "preview": 48250,
+        "mobile": 26262,
+        "detail": 1058298,
+        "detail-mobile": 254854
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 55,
+      "bytes": {
+        "preview": 48320,
+        "mobile": 25982,
+        "detail": 1048756,
+        "detail-mobile": 253836
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 56,
+      "bytes": {
+        "preview": 48196,
+        "mobile": 26132,
+        "detail": 1050796,
+        "detail-mobile": 254068
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 57,
+      "bytes": {
+        "preview": 48868,
+        "mobile": 26900,
+        "detail": 1054516,
+        "detail-mobile": 256562
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 58,
+      "bytes": {
+        "preview": 50160,
+        "mobile": 27128,
+        "detail": 1066580,
+        "detail-mobile": 259446
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 59,
+      "bytes": {
+        "preview": 49736,
+        "mobile": 27244,
+        "detail": 1061030,
+        "detail-mobile": 260154
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 60,
+      "bytes": {
+        "preview": 50232,
+        "mobile": 27476,
+        "detail": 1053732,
+        "detail-mobile": 259624
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 61,
+      "bytes": {
+        "preview": 49316,
+        "mobile": 27504,
+        "detail": 1028360,
+        "detail-mobile": 257782
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 62,
+      "bytes": {
+        "preview": 49084,
+        "mobile": 26988,
+        "detail": 1016990,
+        "detail-mobile": 253552
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 63,
+      "bytes": {
+        "preview": 48716,
+        "mobile": 26844,
+        "detail": 987026,
+        "detail-mobile": 249952
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 64,
+      "bytes": {
+        "preview": 47876,
+        "mobile": 26618,
+        "detail": 960874,
+        "detail-mobile": 241808
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 65,
+      "bytes": {
+        "preview": 46324,
+        "mobile": 25540,
+        "detail": 929862,
+        "detail-mobile": 232410
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 66,
+      "bytes": {
+        "preview": 45114,
+        "mobile": 24562,
+        "detail": 882074,
+        "detail-mobile": 223814
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 67,
+      "bytes": {
+        "preview": 43272,
+        "mobile": 23872,
+        "detail": 831628,
+        "detail-mobile": 209830
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 68,
+      "bytes": {
+        "preview": 41262,
+        "mobile": 22452,
+        "detail": 780014,
+        "detail-mobile": 197860
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 69,
+      "bytes": {
+        "preview": 38752,
+        "mobile": 20988,
+        "detail": 718706,
+        "detail-mobile": 182720
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 70,
+      "bytes": {
+        "preview": 36522,
+        "mobile": 19656,
+        "detail": 658944,
+        "detail-mobile": 166480
+      }
+    },
+    {
+      "colour": "Galaxy_Grey",
+      "frame": 71,
+      "bytes": {
+        "preview": 33398,
+        "mobile": 17868,
+        "detail": 596784,
+        "detail-mobile": 149318
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 0,
+      "bytes": {
+        "preview": 32644,
+        "mobile": 17746,
+        "detail": 579928,
+        "detail-mobile": 145282
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 1,
+      "bytes": {
+        "preview": 34846,
+        "mobile": 18486,
+        "detail": 611802,
+        "detail-mobile": 154772
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 2,
+      "bytes": {
+        "preview": 38346,
+        "mobile": 20524,
+        "detail": 685150,
+        "detail-mobile": 175380
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 3,
+      "bytes": {
+        "preview": 42896,
+        "mobile": 23124,
+        "detail": 768884,
+        "detail-mobile": 197800
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 4,
+      "bytes": {
+        "preview": 46946,
+        "mobile": 25410,
+        "detail": 859364,
+        "detail-mobile": 219408
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 5,
+      "bytes": {
+        "preview": 51078,
+        "mobile": 27062,
+        "detail": 944264,
+        "detail-mobile": 240462
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 6,
+      "bytes": {
+        "preview": 54338,
+        "mobile": 28618,
+        "detail": 1020430,
+        "detail-mobile": 258564
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 7,
+      "bytes": {
+        "preview": 57396,
+        "mobile": 30260,
+        "detail": 1087460,
+        "detail-mobile": 274458
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 8,
+      "bytes": {
+        "preview": 59572,
+        "mobile": 31344,
+        "detail": 1139712,
+        "detail-mobile": 286658
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 9,
+      "bytes": {
+        "preview": 60616,
+        "mobile": 32154,
+        "detail": 1179702,
+        "detail-mobile": 297602
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 10,
+      "bytes": {
+        "preview": 61256,
+        "mobile": 32892,
+        "detail": 1211654,
+        "detail-mobile": 301994
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 11,
+      "bytes": {
+        "preview": 62156,
+        "mobile": 33122,
+        "detail": 1230910,
+        "detail-mobile": 304696
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 12,
+      "bytes": {
+        "preview": 62606,
+        "mobile": 33566,
+        "detail": 1242060,
+        "detail-mobile": 306194
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 13,
+      "bytes": {
+        "preview": 63452,
+        "mobile": 33030,
+        "detail": 1241704,
+        "detail-mobile": 305288
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 14,
+      "bytes": {
+        "preview": 62528,
+        "mobile": 32908,
+        "detail": 1244922,
+        "detail-mobile": 304840
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 15,
+      "bytes": {
+        "preview": 62488,
+        "mobile": 32544,
+        "detail": 1238030,
+        "detail-mobile": 302420
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 16,
+      "bytes": {
+        "preview": 61826,
+        "mobile": 32182,
+        "detail": 1228328,
+        "detail-mobile": 297522
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 17,
+      "bytes": {
+        "preview": 59932,
+        "mobile": 31246,
+        "detail": 1212352,
+        "detail-mobile": 290202
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 18,
+      "bytes": {
+        "preview": 59900,
+        "mobile": 30688,
+        "detail": 1202440,
+        "detail-mobile": 287098
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 19,
+      "bytes": {
+        "preview": 59062,
+        "mobile": 30484,
+        "detail": 1198350,
+        "detail-mobile": 286126
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 20,
+      "bytes": {
+        "preview": 59088,
+        "mobile": 30452,
+        "detail": 1193918,
+        "detail-mobile": 285780
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 21,
+      "bytes": {
+        "preview": 60150,
+        "mobile": 31250,
+        "detail": 1198916,
+        "detail-mobile": 289880
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 22,
+      "bytes": {
+        "preview": 60516,
+        "mobile": 31620,
+        "detail": 1197720,
+        "detail-mobile": 290092
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 23,
+      "bytes": {
+        "preview": 61752,
+        "mobile": 32270,
+        "detail": 1197086,
+        "detail-mobile": 292704
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 24,
+      "bytes": {
+        "preview": 61118,
+        "mobile": 32220,
+        "detail": 1191660,
+        "detail-mobile": 294008
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 25,
+      "bytes": {
+        "preview": 61280,
+        "mobile": 31914,
+        "detail": 1174332,
+        "detail-mobile": 290420
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 26,
+      "bytes": {
+        "preview": 59760,
+        "mobile": 31216,
+        "detail": 1151678,
+        "detail-mobile": 285358
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 27,
+      "bytes": {
+        "preview": 57912,
+        "mobile": 30492,
+        "detail": 1118874,
+        "detail-mobile": 277166
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 28,
+      "bytes": {
+        "preview": 56178,
+        "mobile": 29696,
+        "detail": 1075888,
+        "detail-mobile": 267596
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 29,
+      "bytes": {
+        "preview": 54192,
+        "mobile": 28470,
+        "detail": 1030116,
+        "detail-mobile": 256078
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 30,
+      "bytes": {
+        "preview": 51526,
+        "mobile": 27344,
+        "detail": 980466,
+        "detail-mobile": 245716
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 31,
+      "bytes": {
+        "preview": 48992,
+        "mobile": 25794,
+        "detail": 922438,
+        "detail-mobile": 230580
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 32,
+      "bytes": {
+        "preview": 45144,
+        "mobile": 24198,
+        "detail": 858068,
+        "detail-mobile": 212922
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 33,
+      "bytes": {
+        "preview": 42200,
+        "mobile": 22524,
+        "detail": 784166,
+        "detail-mobile": 196046
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 34,
+      "bytes": {
+        "preview": 38552,
+        "mobile": 20838,
+        "detail": 713376,
+        "detail-mobile": 177190
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 35,
+      "bytes": {
+        "preview": 34640,
+        "mobile": 18396,
+        "detail": 638978,
+        "detail-mobile": 155794
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 36,
+      "bytes": {
+        "preview": 33414,
+        "mobile": 17338,
+        "detail": 610274,
+        "detail-mobile": 147502
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 37,
+      "bytes": {
+        "preview": 34540,
+        "mobile": 18072,
+        "detail": 634794,
+        "detail-mobile": 155388
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 38,
+      "bytes": {
+        "preview": 38126,
+        "mobile": 20422,
+        "detail": 703792,
+        "detail-mobile": 175458
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 39,
+      "bytes": {
+        "preview": 40940,
+        "mobile": 22184,
+        "detail": 771592,
+        "detail-mobile": 194312
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 40,
+      "bytes": {
+        "preview": 43298,
+        "mobile": 23532,
+        "detail": 830780,
+        "detail-mobile": 208454
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 41,
+      "bytes": {
+        "preview": 45472,
+        "mobile": 24768,
+        "detail": 889498,
+        "detail-mobile": 224452
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 42,
+      "bytes": {
+        "preview": 47202,
+        "mobile": 25530,
+        "detail": 933114,
+        "detail-mobile": 234296
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 43,
+      "bytes": {
+        "preview": 48900,
+        "mobile": 26948,
+        "detail": 970968,
+        "detail-mobile": 245470
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 44,
+      "bytes": {
+        "preview": 50166,
+        "mobile": 27432,
+        "detail": 1003510,
+        "detail-mobile": 253644
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 45,
+      "bytes": {
+        "preview": 50418,
+        "mobile": 28176,
+        "detail": 1027298,
+        "detail-mobile": 259150
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 46,
+      "bytes": {
+        "preview": 52110,
+        "mobile": 28628,
+        "detail": 1049124,
+        "detail-mobile": 263160
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 47,
+      "bytes": {
+        "preview": 51624,
+        "mobile": 28952,
+        "detail": 1063494,
+        "detail-mobile": 267636
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 48,
+      "bytes": {
+        "preview": 51960,
+        "mobile": 28630,
+        "detail": 1068980,
+        "detail-mobile": 268042
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 49,
+      "bytes": {
+        "preview": 50878,
+        "mobile": 28440,
+        "detail": 1068044,
+        "detail-mobile": 263812
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 50,
+      "bytes": {
+        "preview": 49434,
+        "mobile": 27494,
+        "detail": 1059626,
+        "detail-mobile": 262982
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 51,
+      "bytes": {
+        "preview": 49950,
+        "mobile": 27646,
+        "detail": 1059200,
+        "detail-mobile": 262134
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 52,
+      "bytes": {
+        "preview": 50258,
+        "mobile": 27482,
+        "detail": 1061066,
+        "detail-mobile": 260678
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 53,
+      "bytes": {
+        "preview": 49642,
+        "mobile": 26930,
+        "detail": 1048646,
+        "detail-mobile": 256022
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 54,
+      "bytes": {
+        "preview": 49178,
+        "mobile": 26628,
+        "detail": 1047410,
+        "detail-mobile": 254790
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 55,
+      "bytes": {
+        "preview": 48938,
+        "mobile": 26334,
+        "detail": 1037622,
+        "detail-mobile": 254402
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 56,
+      "bytes": {
+        "preview": 49198,
+        "mobile": 26586,
+        "detail": 1032270,
+        "detail-mobile": 256026
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 57,
+      "bytes": {
+        "preview": 49294,
+        "mobile": 27402,
+        "detail": 1039450,
+        "detail-mobile": 259154
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 58,
+      "bytes": {
+        "preview": 51142,
+        "mobile": 27640,
+        "detail": 1048728,
+        "detail-mobile": 260714
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 59,
+      "bytes": {
+        "preview": 50706,
+        "mobile": 27952,
+        "detail": 1047056,
+        "detail-mobile": 262490
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 60,
+      "bytes": {
+        "preview": 50668,
+        "mobile": 28160,
+        "detail": 1042524,
+        "detail-mobile": 263500
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 61,
+      "bytes": {
+        "preview": 50570,
+        "mobile": 28264,
+        "detail": 1024892,
+        "detail-mobile": 261544
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 62,
+      "bytes": {
+        "preview": 50230,
+        "mobile": 27838,
+        "detail": 1008900,
+        "detail-mobile": 257502
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 63,
+      "bytes": {
+        "preview": 50036,
+        "mobile": 27732,
+        "detail": 988942,
+        "detail-mobile": 253266
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 64,
+      "bytes": {
+        "preview": 49388,
+        "mobile": 27572,
+        "detail": 962296,
+        "detail-mobile": 246780
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 65,
+      "bytes": {
+        "preview": 47976,
+        "mobile": 26592,
+        "detail": 925900,
+        "detail-mobile": 238314
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 66,
+      "bytes": {
+        "preview": 46872,
+        "mobile": 25696,
+        "detail": 889060,
+        "detail-mobile": 228852
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 67,
+      "bytes": {
+        "preview": 44868,
+        "mobile": 25094,
+        "detail": 839210,
+        "detail-mobile": 216456
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 68,
+      "bytes": {
+        "preview": 42954,
+        "mobile": 23478,
+        "detail": 788944,
+        "detail-mobile": 204312
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 69,
+      "bytes": {
+        "preview": 40108,
+        "mobile": 21798,
+        "detail": 727580,
+        "detail-mobile": 187340
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 70,
+      "bytes": {
+        "preview": 37620,
+        "mobile": 20350,
+        "detail": 668766,
+        "detail-mobile": 171090
+      }
+    },
+    {
+      "colour": "Oceanic_Blue",
+      "frame": 71,
+      "bytes": {
+        "preview": 34424,
+        "mobile": 18686,
+        "detail": 608034,
+        "detail-mobile": 154206
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 0,
+      "bytes": {
+        "preview": 31504,
+        "mobile": 17196,
+        "detail": 564094,
+        "detail-mobile": 138582
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 1,
+      "bytes": {
+        "preview": 33698,
+        "mobile": 17752,
+        "detail": 591758,
+        "detail-mobile": 148766
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 2,
+      "bytes": {
+        "preview": 37342,
+        "mobile": 19718,
+        "detail": 663726,
+        "detail-mobile": 166964
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 3,
+      "bytes": {
+        "preview": 41678,
+        "mobile": 22436,
+        "detail": 747238,
+        "detail-mobile": 189094
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 4,
+      "bytes": {
+        "preview": 45640,
+        "mobile": 24450,
+        "detail": 833006,
+        "detail-mobile": 210598
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 5,
+      "bytes": {
+        "preview": 49156,
+        "mobile": 25860,
+        "detail": 912146,
+        "detail-mobile": 230534
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 6,
+      "bytes": {
+        "preview": 52100,
+        "mobile": 27546,
+        "detail": 983350,
+        "detail-mobile": 247132
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 7,
+      "bytes": {
+        "preview": 55020,
+        "mobile": 28814,
+        "detail": 1049446,
+        "detail-mobile": 262198
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 8,
+      "bytes": {
+        "preview": 56932,
+        "mobile": 29720,
+        "detail": 1096940,
+        "detail-mobile": 271534
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 9,
+      "bytes": {
+        "preview": 58372,
+        "mobile": 30606,
+        "detail": 1136656,
+        "detail-mobile": 278692
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 10,
+      "bytes": {
+        "preview": 59218,
+        "mobile": 31302,
+        "detail": 1165280,
+        "detail-mobile": 285532
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 11,
+      "bytes": {
+        "preview": 59940,
+        "mobile": 31736,
+        "detail": 1182524,
+        "detail-mobile": 288052
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 12,
+      "bytes": {
+        "preview": 60748,
+        "mobile": 31882,
+        "detail": 1193586,
+        "detail-mobile": 289764
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 13,
+      "bytes": {
+        "preview": 60818,
+        "mobile": 31772,
+        "detail": 1198134,
+        "detail-mobile": 288794
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 14,
+      "bytes": {
+        "preview": 60426,
+        "mobile": 31786,
+        "detail": 1203806,
+        "detail-mobile": 289552
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 15,
+      "bytes": {
+        "preview": 60254,
+        "mobile": 31264,
+        "detail": 1200516,
+        "detail-mobile": 287666
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 16,
+      "bytes": {
+        "preview": 59866,
+        "mobile": 30920,
+        "detail": 1191578,
+        "detail-mobile": 284304
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 17,
+      "bytes": {
+        "preview": 58084,
+        "mobile": 30046,
+        "detail": 1180200,
+        "detail-mobile": 279252
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 18,
+      "bytes": {
+        "preview": 57880,
+        "mobile": 29520,
+        "detail": 1173330,
+        "detail-mobile": 277004
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 19,
+      "bytes": {
+        "preview": 57546,
+        "mobile": 29556,
+        "detail": 1171706,
+        "detail-mobile": 276292
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 20,
+      "bytes": {
+        "preview": 57686,
+        "mobile": 29612,
+        "detail": 1171122,
+        "detail-mobile": 276166
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 21,
+      "bytes": {
+        "preview": 58766,
+        "mobile": 30466,
+        "detail": 1176744,
+        "detail-mobile": 280440
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 22,
+      "bytes": {
+        "preview": 58910,
+        "mobile": 30562,
+        "detail": 1174760,
+        "detail-mobile": 281406
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 23,
+      "bytes": {
+        "preview": 59910,
+        "mobile": 31000,
+        "detail": 1172360,
+        "detail-mobile": 282590
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 24,
+      "bytes": {
+        "preview": 59830,
+        "mobile": 31288,
+        "detail": 1167644,
+        "detail-mobile": 282858
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 25,
+      "bytes": {
+        "preview": 59220,
+        "mobile": 31008,
+        "detail": 1150344,
+        "detail-mobile": 280534
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 26,
+      "bytes": {
+        "preview": 57616,
+        "mobile": 30370,
+        "detail": 1124908,
+        "detail-mobile": 275044
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 27,
+      "bytes": {
+        "preview": 56160,
+        "mobile": 29706,
+        "detail": 1090150,
+        "detail-mobile": 267278
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 28,
+      "bytes": {
+        "preview": 54336,
+        "mobile": 28914,
+        "detail": 1053602,
+        "detail-mobile": 258698
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 29,
+      "bytes": {
+        "preview": 52680,
+        "mobile": 27532,
+        "detail": 1008104,
+        "detail-mobile": 247980
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 30,
+      "bytes": {
+        "preview": 50386,
+        "mobile": 26566,
+        "detail": 962460,
+        "detail-mobile": 239238
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 31,
+      "bytes": {
+        "preview": 47852,
+        "mobile": 25194,
+        "detail": 909178,
+        "detail-mobile": 224666
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 32,
+      "bytes": {
+        "preview": 44346,
+        "mobile": 23472,
+        "detail": 847338,
+        "detail-mobile": 208634
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 33,
+      "bytes": {
+        "preview": 41396,
+        "mobile": 22152,
+        "detail": 777616,
+        "detail-mobile": 193088
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 34,
+      "bytes": {
+        "preview": 37798,
+        "mobile": 20332,
+        "detail": 708574,
+        "detail-mobile": 173914
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 35,
+      "bytes": {
+        "preview": 33634,
+        "mobile": 17796,
+        "detail": 632890,
+        "detail-mobile": 152298
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 36,
+      "bytes": {
+        "preview": 32640,
+        "mobile": 16912,
+        "detail": 605310,
+        "detail-mobile": 144820
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 37,
+      "bytes": {
+        "preview": 33782,
+        "mobile": 17706,
+        "detail": 629656,
+        "detail-mobile": 151858
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 38,
+      "bytes": {
+        "preview": 37138,
+        "mobile": 20044,
+        "detail": 701870,
+        "detail-mobile": 172304
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 39,
+      "bytes": {
+        "preview": 40272,
+        "mobile": 21648,
+        "detail": 763378,
+        "detail-mobile": 189650
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 40,
+      "bytes": {
+        "preview": 42382,
+        "mobile": 22926,
+        "detail": 821986,
+        "detail-mobile": 204430
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 41,
+      "bytes": {
+        "preview": 44016,
+        "mobile": 24052,
+        "detail": 870536,
+        "detail-mobile": 217450
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 42,
+      "bytes": {
+        "preview": 45856,
+        "mobile": 24700,
+        "detail": 915386,
+        "detail-mobile": 227506
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 43,
+      "bytes": {
+        "preview": 46914,
+        "mobile": 25752,
+        "detail": 952688,
+        "detail-mobile": 236502
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 44,
+      "bytes": {
+        "preview": 48722,
+        "mobile": 26538,
+        "detail": 980556,
+        "detail-mobile": 244292
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 45,
+      "bytes": {
+        "preview": 48474,
+        "mobile": 26940,
+        "detail": 1003564,
+        "detail-mobile": 248450
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 46,
+      "bytes": {
+        "preview": 50016,
+        "mobile": 27604,
+        "detail": 1024862,
+        "detail-mobile": 254500
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 47,
+      "bytes": {
+        "preview": 50140,
+        "mobile": 27824,
+        "detail": 1039936,
+        "detail-mobile": 257102
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 48,
+      "bytes": {
+        "preview": 49840,
+        "mobile": 27394,
+        "detail": 1045988,
+        "detail-mobile": 257756
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 49,
+      "bytes": {
+        "preview": 49556,
+        "mobile": 27246,
+        "detail": 1050586,
+        "detail-mobile": 255754
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 50,
+      "bytes": {
+        "preview": 48336,
+        "mobile": 26578,
+        "detail": 1037568,
+        "detail-mobile": 253542
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 51,
+      "bytes": {
+        "preview": 48522,
+        "mobile": 26576,
+        "detail": 1042172,
+        "detail-mobile": 251962
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 52,
+      "bytes": {
+        "preview": 48408,
+        "mobile": 26278,
+        "detail": 1035106,
+        "detail-mobile": 250024
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 53,
+      "bytes": {
+        "preview": 47610,
+        "mobile": 25848,
+        "detail": 1023500,
+        "detail-mobile": 245420
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 54,
+      "bytes": {
+        "preview": 47148,
+        "mobile": 25620,
+        "detail": 1020228,
+        "detail-mobile": 244584
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 55,
+      "bytes": {
+        "preview": 46938,
+        "mobile": 25582,
+        "detail": 1011368,
+        "detail-mobile": 244090
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 56,
+      "bytes": {
+        "preview": 47074,
+        "mobile": 25450,
+        "detail": 1011240,
+        "detail-mobile": 244366
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 57,
+      "bytes": {
+        "preview": 47990,
+        "mobile": 26322,
+        "detail": 1010280,
+        "detail-mobile": 247028
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 58,
+      "bytes": {
+        "preview": 48894,
+        "mobile": 26484,
+        "detail": 1018816,
+        "detail-mobile": 250836
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 59,
+      "bytes": {
+        "preview": 49256,
+        "mobile": 26934,
+        "detail": 1015586,
+        "detail-mobile": 250698
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 60,
+      "bytes": {
+        "preview": 49298,
+        "mobile": 27064,
+        "detail": 1007680,
+        "detail-mobile": 249572
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 61,
+      "bytes": {
+        "preview": 48554,
+        "mobile": 27078,
+        "detail": 990700,
+        "detail-mobile": 248456
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 62,
+      "bytes": {
+        "preview": 48304,
+        "mobile": 26666,
+        "detail": 974694,
+        "detail-mobile": 244598
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 63,
+      "bytes": {
+        "preview": 48682,
+        "mobile": 26670,
+        "detail": 955034,
+        "detail-mobile": 242248
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 64,
+      "bytes": {
+        "preview": 47448,
+        "mobile": 26360,
+        "detail": 931730,
+        "detail-mobile": 236084
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 65,
+      "bytes": {
+        "preview": 46016,
+        "mobile": 25548,
+        "detail": 897298,
+        "detail-mobile": 228624
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 66,
+      "bytes": {
+        "preview": 45138,
+        "mobile": 24734,
+        "detail": 860772,
+        "detail-mobile": 220636
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 67,
+      "bytes": {
+        "preview": 43176,
+        "mobile": 23864,
+        "detail": 812444,
+        "detail-mobile": 207850
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 68,
+      "bytes": {
+        "preview": 41448,
+        "mobile": 22658,
+        "detail": 765616,
+        "detail-mobile": 194550
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 69,
+      "bytes": {
+        "preview": 38908,
+        "mobile": 21116,
+        "detail": 707690,
+        "detail-mobile": 181080
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 70,
+      "bytes": {
+        "preview": 36366,
+        "mobile": 19718,
+        "detail": 649366,
+        "detail-mobile": 164240
+      }
+    },
+    {
+      "colour": "Stealth_Black",
+      "frame": 71,
+      "bytes": {
+        "preview": 33396,
+        "mobile": 17840,
+        "detail": 586156,
+        "detail-mobile": 146908
+      }
+    }
+  ]
+}

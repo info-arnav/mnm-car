@@ -9,7 +9,7 @@
   if (!/^https?:$/.test(viewerURL.protocol)) return;
   viewerURL.searchParams.set('id', model);
   viewerURL.searchParams.set('parentOrigin', location.origin);
-  viewerURL.searchParams.set('v', 'embed-scn-1');
+  viewerURL.searchParams.set('v', 'embed-scn-colours-1');
   var watcher, mounted = false;
   function mount() {
     var container = document.getElementById(targetId);

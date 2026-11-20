@@ -1,5 +1,1 @@
-{
-  "version": "model-ready-4",
-  "representation": "Original source frames with calibrated 3D accessories",
-  "fix": "Prepared lightweight rotation, high-resolution idle detail, on-demand rendering and a simple model loading screen"
-}
+{"version":"colours-1","colours":5,"viewsPerColour":72,"representation":"Original colour image sequences with calibrated 3D accessories"}
